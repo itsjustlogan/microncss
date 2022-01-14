@@ -52,3 +52,167 @@ $two-prop: (
     }
   }
 }
+
+// hover
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .hover\:#{$name}:hover {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    } @else {
+      .hover\:#{$name}-#{$k}:hover {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    }
+  }
+}
+
+// focus
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .focus\:#{$name}:focus {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    } @else {
+      .focus\:#{$name}-#{$k}:focus {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    }
+  }
+}
+
+// active
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .active\:#{$name}:active {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    } @else {
+      .active\:#{$name}-#{$k}:active {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    }
+  }
+}
+
+// breakpoints
+// small
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .sm\:#{$name} {
+        @include sm {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include sm {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    }
+  }
+}
+
+// medium
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .md\:#{$name} {
+        @include md {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    } @else {
+      .md\:#{$name}-#{$k} {
+        @include md {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    }
+  }
+}
+
+// large
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .lg\:#{$name} {
+        @include lg {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    } @else {
+      .lg\:#{$name}-#{$k} {
+        @include lg {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    }
+  }
+}
+
+// extra large
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .xl\:#{$name} {
+        @include xl {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    } @else {
+      .xl\:#{$name}-#{$k} {
+        @include xl {
+          #{$prop1}: $v;
+          #{$prop2}: $v;  
+        }
+      }
+    }
+  }
+}

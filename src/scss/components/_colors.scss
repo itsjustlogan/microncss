@@ -538,45 +538,6 @@ $colors: (
       "500": #831843,
     ),
   ),
-  "scale": (
-    "prop": "transform",
-    "values": (
-      "0": scale(0),
-      "50": scale(.5),
-      "75": scale(.75),
-      "90": scale(.9),
-      "100": scale(1),
-      "110": scale(1.1),
-      "120": scale(1.2),
-      "150": scale(1.5),
-    ),
-  ),
-  "scale-x": (
-    "prop": "transform",
-    "values": (
-      "0": scaleX(0),
-      "50": scaleX(.5),
-      "75": scaleX(.75),
-      "90": scaleX(.9),
-      "100": scaleX(1),
-      "110": scaleX(1.1),
-      "120": scaleX(1.2),
-      "150": scaleX(1.5),
-    ),
-  ),
-  "scale-y": (
-    "prop": "transform",
-    "values": (
-      "0": scaleY(0),
-      "50": scaleY(.5),
-      "75": scaleY(.75),
-      "90": scaleY(.9),
-      "100": scaleY(1),
-      "110": scaleY(1.1),
-      "120": scaleY(1.2),
-      "150": scaleY(1.5),
-    ),
-  ),
   "uppercase": (
     "prop": "text-transform",
     "values": (
@@ -664,6 +625,95 @@ $colors: (
     } @else {
       .active\:#{$name}-#{$k}:active {
         #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// breakpoints
+// small
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .sm\:#{$name} {
+        @include sm{
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include sm {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// medium
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .md\:#{$name} {
+        @include md{
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .md\:#{$name}-#{$k} {
+        @include md {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// large
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .lg\:#{$name} {
+        @include lg{
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .lg\:#{$name}-#{$k} {
+        @include lg {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// extra large
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .xl\:#{$name} {
+        @include xl{
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .xl\:#{$name}-#{$k} {
+        @include xl {
+          #{$prop}: $v;
+        }
       }
     }
   }

@@ -1,3 +1,65 @@
+$animate: (
+  "scale": (
+    "prop": "transform",
+    "values": (
+      "0": scale(0),
+      "50": scale(.5),
+      "75": scale(.75),
+      "90": scale(.9),
+      "100": scale(1),
+      "110": scale(1.1),
+      "120": scale(1.2),
+      "150": scale(1.5),
+    ),
+  ),
+  "scale-x": (
+    "prop": "transform",
+    "values": (
+      "0": scaleX(0),
+      "50": scaleX(.5),
+      "75": scaleX(.75),
+      "90": scaleX(.9),
+      "100": scaleX(1),
+      "110": scaleX(1.1),
+      "120": scaleX(1.2),
+      "150": scaleX(1.5),
+    ),
+  ),
+  "scale-y": (
+    "prop": "transform",
+    "values": (
+      "0": scaleY(0),
+      "50": scaleY(.5),
+      "75": scaleY(.75),
+      "90": scaleY(.9),
+      "100": scaleY(1),
+      "110": scaleY(1.1),
+      "120": scaleY(1.2),
+      "150": scaleY(1.5),
+    ),
+  ),
+  "fade": (
+    "prop": "animation",
+    "values": (
+      "1": fadein .15s ease-in,
+      "2": fadein .2s ease-in,
+      "3": fadein .3s ease-in,
+      "4": fadein .4s ease-in,
+      "5": fadein .5s ease-in,
+    ),
+  ),
+  "bounce-fade": (
+    "prop": "animation",
+    "values": (
+      "1": bouncefadein .15s ease-in,
+      "2": bouncefadein .2s ease-in,
+      "3": bouncefadein .3s ease-in,
+      "4": bouncefadein .4s ease-in,
+      "5": bouncefadein .5s ease-in,
+    ),
+  ),
+);
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -5,5 +67,93 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes bouncefadein {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// generate utility classes
+@each $name, $map in $animate {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .#{$name} {
+        #{$prop}: $v;
+      }
+    } @else {
+      .#{$name}-#{$k}{
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// hover
+@each $name, $map in $animate {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .hover\:#{$name}:hover {
+        #{$prop}: $v;
+      }
+    } @else {
+      .hover\:#{$name}-#{$k}:hover {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// focus
+@each $name, $map in $animate {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .focus\:#{$name}:focus {
+        #{$prop}: $v;
+      }
+    } @else {
+      .focus\:#{$name}-#{$k}:focus {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// active
+@each $name, $map in $animate {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .active\:#{$name}:active {
+        #{$prop}: $v;
+      }
+    } @else {
+      .active\:#{$name}-#{$k}:active {
+        #{$prop}: $v;
+      }
+    }
   }
 }

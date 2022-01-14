@@ -142,10 +142,10 @@ $utilities: (
   "font-size": (
     "prefix": "font",
     "values": (
-      "xs": div($base-font, 2),
+      "xs": calc($base-font / 2),
       "sm": 0.75rem,
       "base": $base-font,
-      "md": div($base-font, 1.25),
+      "md": $base-font * 1.25,
       "lg": $base-font * 1.5,
       "xl": $base-font * 2,
       "xxl": $base-font * 2.5,
@@ -438,85 +438,164 @@ $utilities: (
       "5": .5s ease-in-out,
     ),
   ),
-  "animation": (
-    "prefix": "fade",
-    "values": (
-      "1": fadein .1s ease-in,
-      "2": fadein .2s ease-in,
-      "3": fadein .3s ease-in,
-      "4": fadein .4s ease-in,
-      "5": fadein .5s ease-in,
-    ),
-  ),
 );
 
 // generate utility classes
-@each $prefixerty, $map in $utilities {
+@each $property, $map in $utilities {
   $prefix: map-get($map, "prefix");
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
     @if($k == "default") {
       .#{$prefix} {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     } @else {
       .#{$prefix}-#{$k}{
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     }
   }
 }
 
 // hover
-@each $prefixerty, $map in $utilities {
+@each $property, $map in $utilities {
   $prefix: map-get($map, "prefix");
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
     @if($k == "default") {
       .hover\:#{$prefix}:hover {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     } @else {
       .hover\:#{$prefix}-#{$k}:hover {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     }
   }
 }
 
 // focus
-@each $prefixerty, $map in $utilities {
+@each $property, $map in $utilities {
   $prefix: map-get($map, "prefix");
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
     @if($k == "default") {
       .focus\:#{$prefix}:focus {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     } @else {
       .focus\:#{$prefix}-#{$k}:focus {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     }
   }
 }
 
 // active
-@each $prefixerty, $map in $utilities {
+@each $property, $map in $utilities {
   $prefix: map-get($map, "prefix");
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
     @if($k == "default") {
       .active\:#{$prefix}:active {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
       }
     } @else {
       .active\:#{$prefix}-#{$k}:active {
-        #{$prefixerty}: $v;
+        #{$property}: $v;
+      }
+    }
+  }
+}
+
+// breakpoints
+// small
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .sm\:#{$prefix} {
+        @include sm {
+          #{$property}: $v;          
+        }
+      }
+    } @else {
+      .sm\:#{$prefix}-#{$k} {
+        @include sm {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
+
+// medium
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .md\:#{$prefix} {
+        @include md {
+          #{$property}: $v;          
+        }
+      }
+    } @else {
+      .md\:#{$prefix}-#{$k} {
+        @include md {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
+
+// large
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .lg\:#{$prefix} {
+        @include lg {
+          #{$property}: $v;          
+        }
+      }
+    } @else {
+      .lg\:#{$prefix}-#{$k} {
+        @include lg {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
+
+// extra large
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .xl\:#{$prefix} {
+        @include xl {
+          #{$property}: $v;          
+        }
+      }
+    } @else {
+      .xl\:#{$prefix}-#{$k} {
+        @include xl {
+          #{$property}: $v;
+        }
       }
     }
   }
