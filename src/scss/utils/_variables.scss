@@ -1,6 +1,25 @@
-$primary: #111;
-$secondary: #009DD4;
-$textcolor: #fff;
-$regular: 400;
-$medium: 500;
-$bold: 700;
+// Base values
+
+//padding
+$base-padding: .75em;
+
+// margin
+$base-margin: .75rem;
+
+// font
+$base-font: 1rem;
+
+// width
+$base-width: 10%;
+
+// height
+$base-height: 10%;
+
+// opacity
+$base-opacity: 0.1;
+
+// border-radius
+$base-border-radius: 5px;
+
+// border-width
+$base-border-width: 1px;

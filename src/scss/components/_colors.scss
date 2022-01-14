@@ -1,0 +1,670 @@
+@use '../utils' as *;
+
+$colors: (
+  "text-black": (
+    "prop": "color",
+    "values": (
+      "50": #222222,
+      "100": #000000,
+    ),
+  ),
+  "text-white": (
+    "prop": "color",
+    "values": (
+      "50": #ffffff,
+      "100": #fefefe,
+    ),
+  ),
+  "text-gray": (
+    "prop": "color",
+    "values": (
+      "50": #94a3b8,
+      "100": #64748b,
+      "200": #475569,
+      "300": #334155,
+      "400": #1e293b,
+      "500": #0f172a,
+    ),
+  ),
+  "text-red": (
+    "prop": "color",
+    "values": (
+      "50": #f87171,
+      "100": #ef4444,
+      "200": #dc2626,
+      "300": #b91c1c,
+      "400": #991b1b,
+      "500": #7f1d1d,
+    ),
+  ),
+  "text-orange": (
+    "prop": "color",
+    "values": (
+      "50": #fb923c,
+      "100": #f97316,
+      "200": #ea580c,
+      "300": #c2410c,
+      "400": #9a3412,
+      "500": #7c2d12,
+    ),
+  ),
+  "text-yellow": (
+    "prop": "color",
+    "values": (
+      "50": #facc15,
+      "100": #eab308,
+      "200": #ca8a04,
+      "300": #a16207,
+      "400": #854d0e,
+      "500": #713f12,
+    ),
+  ),
+  "text-lime": (
+    "prop": "color",
+    "values": (
+      "50": #a3e635,
+      "100": #84cc16,
+      "200": #65a30d,
+      "300": #4d7c0f,
+      "400": #3f6212,
+      "500": #365314,
+    ),
+  ),
+  "text-green": (
+    "prop": "color",
+    "values": (
+      "50": #4ade80,
+      "100": #22c55e,
+      "200": #16a34a,
+      "300": #15803d,
+      "400": #166534,
+      "500": #14532d,
+    ),
+  ),
+  "text-teal": (
+    "prop": "color",
+    "values": (
+      "50": #2dd4bf,
+      "100": #14b8a6,
+      "200": #0d9488,
+      "300": #0f766e,
+      "400": #115e59,
+      "500": #134e4a,
+    ),
+  ),
+  "text-cyan": (
+    "prop": "color",
+    "values": (
+      "50": #22d3ee,
+      "100": #06b6d4,
+      "200": #0891b2,
+      "300": #0e7490,
+      "400": #155e75,
+      "500": #164e63,
+    ),
+  ),
+  "text-sky": (
+    "prop": "color",
+    "values": (
+      "50": #38bdf8,
+      "100": #0ea5e9,
+      "200": #0284c7,
+      "300": #0369a1,
+      "400": #075985,
+      "500": #0c4a6e,
+    ),
+  ),
+  "text-blue": (
+    "prop": "color",
+    "values": (
+      "50": #60a5fa,
+      "100": #3b82f6,
+      "200": #2563eb,
+      "300": #1d4ed8,
+      "400": #1e40af,
+      "500": #1e3a8a,
+    ),
+  ),
+  "text-indigo": (
+    "prop": "color",
+    "values": (
+      "50": #818cf8,
+      "100": #6366f1,
+      "200": #4f46e5,
+      "300": #4338ca,
+      "400": #3730a3,
+      "500": #312e81,
+    ),
+  ),
+  "text-violet": (
+    "prop": "color",
+    "values": (
+      "50": #a78bfa,
+      "100": #8b5cf6,
+      "200": #7c3aed,
+      "300": #6d28d9,
+      "400": #5b21b6,
+      "500": #4c1d95,
+    ),
+  ),
+  "text-purple": (
+    "prop": "color",
+    "values": (
+      "50": #c084fc,
+      "100": #a855f7,
+      "200": #9333ea,
+      "300": #7e22ce,
+      "400": #6b21a8,
+      "500": #581c87,
+    ),
+  ),
+  "text-fuchsia": (
+    "prop": "color",
+    "values": (
+      "50": #e879f9,
+      "100": #d946ef,
+      "200": #c026d3,
+      "300": #a21caf,
+      "400": #86198f,
+      "500": #701a75,
+    ),
+  ),
+  "text-pink": (
+    "prop": "color",
+    "values": (
+      "50": #f472b6,
+      "100": #ec4899,
+      "200": #db2777,
+      "300": #be185d,
+      "400": #9d174d,
+      "500": #831843,
+    ),
+  ),
+  "bg-black": (
+    "prop": "background-color",
+    "values": (
+      "50": #222222,
+      "100": #000000,
+    ),
+  ),
+  "bg-white": (
+    "prop": "background-color",
+    "values": (
+      "50": #ffffff,
+      "100": #fefefe,
+    ),
+  ),
+  "bg-gray": (
+    "prop": "background-color",
+    "values": (
+      "50": #94a3b8,
+      "100": #64748b,
+      "200": #475569,
+      "300": #334155,
+      "400": #1e293b,
+      "500": #0f172a,
+    ),
+  ),
+  "bg-red": (
+    "prop": "background-color",
+    "values": (
+      "50": #f87171,
+      "100": #ef4444,
+      "200": #dc2626,
+      "300": #b91c1c,
+      "400": #991b1b,
+      "500": #7f1d1d,
+    ),
+  ),
+  "bg-orange": (
+    "prop": "background-color",
+    "values": (
+      "50": #fb923c,
+      "100": #f97316,
+      "200": #ea580c,
+      "300": #c2410c,
+      "400": #9a3412,
+      "500": #7c2d12,
+    ),
+  ),
+  "bg-yellow": (
+    "prop": "background-color",
+    "values": (
+      "50": #facc15,
+      "100": #eab308,
+      "200": #ca8a04,
+      "300": #a16207,
+      "400": #854d0e,
+      "500": #713f12,
+    ),
+  ),
+  "bg-lime": (
+    "prop": "background-color",
+    "values": (
+      "50": #a3e635,
+      "100": #84cc16,
+      "200": #65a30d,
+      "300": #4d7c0f,
+      "400": #3f6212,
+      "500": #365314,
+    ),
+  ),
+  "bg-green": (
+    "prop": "background-color",
+    "values": (
+      "50": #4ade80,
+      "100": #22c55e,
+      "200": #16a34a,
+      "300": #15803d,
+      "400": #166534,
+      "500": #14532d,
+    ),
+  ),
+  "bg-teal": (
+    "prop": "background-color",
+    "values": (
+      "50": #2dd4bf,
+      "100": #14b8a6,
+      "200": #0d9488,
+      "300": #0f766e,
+      "400": #115e59,
+      "500": #134e4a,
+    ),
+  ),
+  "bg-cyan": (
+    "prop": "background-color",
+    "values": (
+      "50": #22d3ee,
+      "100": #06b6d4,
+      "200": #0891b2,
+      "300": #0e7490,
+      "400": #155e75,
+      "500": #164e63,
+    ),
+  ),
+  "bg-sky": (
+    "prop": "background-color",
+    "values": (
+      "50": #38bdf8,
+      "100": #0ea5e9,
+      "200": #0284c7,
+      "300": #0369a1,
+      "400": #075985,
+      "500": #0c4a6e,
+    ),
+  ),
+  "bg-blue": (
+    "prop": "background-color",
+    "values": (
+      "50": #60a5fa,
+      "100": #3b82f6,
+      "200": #2563eb,
+      "300": #1d4ed8,
+      "400": #1e40af,
+      "500": #1e3a8a,
+    ),
+  ),
+  "bg-indigo": (
+    "prop": "background-color",
+    "values": (
+      "50": #818cf8,
+      "100": #6366f1,
+      "200": #4f46e5,
+      "300": #4338ca,
+      "400": #3730a3,
+      "500": #312e81,
+    ),
+  ),
+  "bg-violet": (
+    "prop": "background-color",
+    "values": (
+      "50": #a78bfa,
+      "100": #8b5cf6,
+      "200": #7c3aed,
+      "300": #6d28d9,
+      "400": #5b21b6,
+      "500": #4c1d95,
+    ),
+  ),
+  "bg-purple": (
+    "prop": "background-color",
+    "values": (
+      "50": #c084fc,
+      "100": #a855f7,
+      "200": #9333ea,
+      "300": #7e22ce,
+      "400": #6b21a8,
+      "500": #581c87,
+    ),
+  ),
+  "bg-fuchsia": (
+    "prop": "background-color",
+    "values": (
+      "50": #e879f9,
+      "100": #d946ef,
+      "200": #c026d3,
+      "300": #a21caf,
+      "400": #86198f,
+      "500": #701a75,
+    ),
+  ),
+  "bg-pink": (
+    "prop": "background-color",
+    "values": (
+      "50": #f472b6,
+      "100": #ec4899,
+      "200": #db2777,
+      "300": #be185d,
+      "400": #9d174d,
+      "500": #831843,
+    ),
+  ),
+  "border-black": (
+    "prop": "border-color",
+    "values": (
+      "50": #222222,
+      "100": #000000,
+    ),
+  ),
+  "border-white": (
+    "prop": "border-color",
+    "values": (
+      "50": #ffffff,
+      "100": #fefefe,
+    ),
+  ),
+  "border-gray": (
+    "prop": "border-color",
+    "values": (
+      "50": #94a3b8,
+      "100": #64748b,
+      "200": #475569,
+      "300": #334155,
+      "400": #1e293b,
+      "500": #0f172a,
+    ),
+  ),
+  "border-red": (
+    "prop": "border-color",
+    "values": (
+      "50": #f87171,
+      "100": #ef4444,
+      "200": #dc2626,
+      "300": #b91c1c,
+      "400": #991b1b,
+      "500": #7f1d1d,
+    ),
+  ),
+  "border-orange": (
+    "prop": "border-color",
+    "values": (
+      "50": #fb923c,
+      "100": #f97316,
+      "200": #ea580c,
+      "300": #c2410c,
+      "400": #9a3412,
+      "500": #7c2d12,
+    ),
+  ),
+  "border-yellow": (
+    "prop": "border-color",
+    "values": (
+      "50": #facc15,
+      "100": #eab308,
+      "200": #ca8a04,
+      "300": #a16207,
+      "400": #854d0e,
+      "500": #713f12,
+    ),
+  ),
+  "border-lime": (
+    "prop": "border-color",
+    "values": (
+      "50": #a3e635,
+      "100": #84cc16,
+      "200": #65a30d,
+      "300": #4d7c0f,
+      "400": #3f6212,
+      "500": #365314,
+    ),
+  ),
+  "border-green": (
+    "prop": "border-color",
+    "values": (
+      "50": #4ade80,
+      "100": #22c55e,
+      "200": #16a34a,
+      "300": #15803d,
+      "400": #166534,
+      "500": #14532d,
+    ),
+  ),
+  "border-teal": (
+    "prop": "border-color",
+    "values": (
+      "50": #2dd4bf,
+      "100": #14b8a6,
+      "200": #0d9488,
+      "300": #0f766e,
+      "400": #115e59,
+      "500": #134e4a,
+    ),
+  ),
+  "border-cyan": (
+    "prop": "border-color",
+    "values": (
+      "50": #22d3ee,
+      "100": #06b6d4,
+      "200": #0891b2,
+      "300": #0e7490,
+      "400": #155e75,
+      "500": #164e63,
+    ),
+  ),
+  "border-sky": (
+    "prop": "border-color",
+    "values": (
+      "50": #38bdf8,
+      "100": #0ea5e9,
+      "200": #0284c7,
+      "300": #0369a1,
+      "400": #075985,
+      "500": #0c4a6e,
+    ),
+  ),
+  "border-blue": (
+    "prop": "border-color",
+    "values": (
+      "50": #60a5fa,
+      "100": #3b82f6,
+      "200": #2563eb,
+      "300": #1d4ed8,
+      "400": #1e40af,
+      "500": #1e3a8a,
+    ),
+  ),
+  "border-indigo": (
+    "prop": "border-color",
+    "values": (
+      "50": #818cf8,
+      "100": #6366f1,
+      "200": #4f46e5,
+      "300": #4338ca,
+      "400": #3730a3,
+      "500": #312e81,
+    ),
+  ),
+  "border-violet": (
+    "prop": "border-color",
+    "values": (
+      "50": #a78bfa,
+      "100": #8b5cf6,
+      "200": #7c3aed,
+      "300": #6d28d9,
+      "400": #5b21b6,
+      "500": #4c1d95,
+    ),
+  ),
+  "border-purple": (
+    "prop": "border-color",
+    "values": (
+      "50": #c084fc,
+      "100": #a855f7,
+      "200": #9333ea,
+      "300": #7e22ce,
+      "400": #6b21a8,
+      "500": #581c87,
+    ),
+  ),
+  "border-fuchsia": (
+    "prop": "border-color",
+    "values": (
+      "50": #e879f9,
+      "100": #d946ef,
+      "200": #c026d3,
+      "300": #a21caf,
+      "400": #86198f,
+      "500": #701a75,
+    ),
+  ),
+  "border-pink": (
+    "prop": "border-color",
+    "values": (
+      "50": #f472b6,
+      "100": #ec4899,
+      "200": #db2777,
+      "300": #be185d,
+      "400": #9d174d,
+      "500": #831843,
+    ),
+  ),
+  "scale": (
+    "prop": "transform",
+    "values": (
+      "0": scale(0),
+      "50": scale(.5),
+      "75": scale(.75),
+      "90": scale(.9),
+      "100": scale(1),
+      "110": scale(1.1),
+      "120": scale(1.2),
+      "150": scale(1.5),
+    ),
+  ),
+  "scale-x": (
+    "prop": "transform",
+    "values": (
+      "0": scaleX(0),
+      "50": scaleX(.5),
+      "75": scaleX(.75),
+      "90": scaleX(.9),
+      "100": scaleX(1),
+      "110": scaleX(1.1),
+      "120": scaleX(1.2),
+      "150": scaleX(1.5),
+    ),
+  ),
+  "scale-y": (
+    "prop": "transform",
+    "values": (
+      "0": scaleY(0),
+      "50": scaleY(.5),
+      "75": scaleY(.75),
+      "90": scaleY(.9),
+      "100": scaleY(1),
+      "110": scaleY(1.1),
+      "120": scaleY(1.2),
+      "150": scaleY(1.5),
+    ),
+  ),
+  "uppercase": (
+    "prop": "text-transform",
+    "values": (
+      "default": uppercase,
+    ),
+  ),
+  "lowercase": (
+    "prop": "text-transform",
+    "values": (
+      "default": lowercase,
+    ),
+  ),
+  "capitalize": (
+    "prop": "text-transform",
+    "values": (
+      "default": capitalize,
+    ),
+  ),
+);
+
+// generate utility classes
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .#{$name} {
+        #{$prop}: $v;
+      }
+    } @else {
+      .#{$name}-#{$k}{
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// hover
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .hover\:#{$name}:hover {
+        #{$prop}: $v;
+      }
+    } @else {
+      .hover\:#{$name}-#{$k}:hover {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// focus
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .focus\:#{$name}:focus {
+        #{$prop}: $v;
+      }
+    } @else {
+      .focus\:#{$name}-#{$k}:focus {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// active
+@each $name, $map in $colors {
+  $prop: map-get($map, "prop");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .active\:#{$name}:active {
+        #{$prop}: $v;
+      }
+    } @else {
+      .active\:#{$name}-#{$k}:active {
+        #{$prop}: $v;
+      }
+    }
+  }
+}

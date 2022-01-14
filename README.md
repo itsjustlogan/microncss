@@ -1,4 +1,4 @@
-# Mini CSS
+# Mini CSS Utility Library
 
 **Version 1.0.0**
 
@@ -7,7 +7,7 @@
 
 ## Description
 
-Mini CSS library containing reset, utility classes, and some basic reusable and default styles.
+Mini CSS utility library containing reset, utility classes, and some basic reusable and default styles.
 
 
 ## Contributors

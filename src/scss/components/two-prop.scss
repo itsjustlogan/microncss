@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+$two-prop: (
+  "px": (
+    "prop1": "padding-left",
+    "prop2": "padding-right",
+    "values": (
+      "1": $base-padding,
+      "2": $base-padding * 2,
+      "3": $base-padding * 4,
+      "4": $base-padding * 6,
+      "5": $base-padding * 8,
+    ),
+  ),
+  "mx": (
+    "prop1": "margin-left",
+    "prop2": "margin-right",
+    "values": (
+      "1": $base-margin,
+      "2": $base-margin * 2,
+      "3": $base-margin * 4,
+      "4": $base-margin * 6,
+      "5": $base-margin * 8,
+    ),
+  ),
+  "center": (
+    "prop1": "justify-content",
+    "prop2": "align-content",
+    "values": (
+      "default": center,
+    ),
+  ),
+);
+
+// generate utility classes
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, "prop1");
+  $prop2: map-get($map, "prop2");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .#{$name} {
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    } @else {
+      .#{$name}-#{$k}{
+        #{$prop1}: $v;
+        #{$prop2}: $v;
+      }
+    }
+  }
+}

@@ -1,11 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  
-  //layout troubleshooting check
-  // outline: 1px solid #f00 !important;
 }
 
 :root {
@@ -14,13 +9,5 @@
 }
 
 body {
-  min-height: 100vh;
-}
-
-.wrapper {
-  position: relative;
-}
-
-.main--content {
-  flex-direction: column;
+  overflow-x: hidden;
 }
