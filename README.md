@@ -4,9 +4,6 @@
 
 ![Logo](/public/favicon.ico)
 
-**Link:**
-`https://cdn.jsdelivr.net/gh/itsjustlogan/mini-css-utility-library@main/dist/index.603968dc.css`
-
 ## Description
 
 Mini CSS utility library containing reset, utility classes, and some basic reusable and default styles.
@@ -15,10 +12,8 @@ Mini CSS utility library containing reset, utility classes, and some basic reusa
 
 Simply link to this utility library using a link tag in your html like so:
   
-  `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsjustlogan/mini-css-utility-library@main/dist/index.603968dc.css"></link>
+  `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsjustlogan/mini-css-utility-library@0.1.1/release-v0.1.1/index.0.1.1.css">
   `
-
-
 
 ## Contributors
 
