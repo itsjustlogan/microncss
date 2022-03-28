@@ -1,0 +1,183 @@
+@use '../utils' as *;
+
+$extra: (
+  'uppercase': (
+    'prop': 'text-transform',
+    'values': (
+      'default': uppercase,
+    ),
+  ),
+  'lowercase': (
+    'prop': 'text-transform',
+    'values': (
+      'default': lowercase,
+    ),
+  ),
+  'capitalize': (
+    'prop': 'text-transform',
+    'values': (
+      'default': capitalize,
+    ),
+  ),
+);
+
+// generate utility classes
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .#{$name} {
+        #{$prop}: $v;
+      }
+    } @else {
+      .#{$name}-#{$k} {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// hover
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .hover\:#{$name}:hover {
+        #{$prop}: $v;
+      }
+    } @else {
+      .hover\:#{$name}-#{$k}:hover {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// focus
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .focus\:#{$name}:focus {
+        #{$prop}: $v;
+      }
+    } @else {
+      .focus\:#{$name}-#{$k}:focus {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// active
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .active\:#{$name}:active {
+        #{$prop}: $v;
+      }
+    } @else {
+      .active\:#{$name}-#{$k}:active {
+        #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// breakpoints
+// small
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .sm\:#{$name} {
+        @include sm {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include sm {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// medium
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .md\:#{$name} {
+        @include md {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .md\:#{$name}-#{$k} {
+        @include md {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// large
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .lg\:#{$name} {
+        @include lg {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .lg\:#{$name}-#{$k} {
+        @include lg {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// extra large
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .xl\:#{$name} {
+        @include xl {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .xl\:#{$name}-#{$k} {
+        @include xl {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}

@@ -1,20 +1,54 @@
-# Mini CSS Utility Library
+<div class="logo">
+<div class="bg bg-size logo-img"></div>
+</div>
 
-**Version 0.1.0**
+<style>
+.logo {
+  display: grid;
+}
 
-![Logo](/public/favicon.ico)
+.logo-img {
+  background-image: url("https://user-images.githubusercontent.com/31719884/160035466-c5e16e7a-b32a-41cc-8d5d-d62b3acc27b6.png");
+}
 
-## Description
+.bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-Mini CSS utility library containing reset, utility classes, and some basic reusable and default styles.
+.bg-size {
+  width: 100%;
+  height: 100px;
+}
+</style>
 
-## Using the library
+A zero configuration self purging css utility library.
 
-Simply link to this utility library using a link tag in your html like so:
-  
-  `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsjustlogan/mini-css-utility-library@0.1.1/release-v0.1.1/index.0.1.1.css">
-  `
+[![npm](https://img.shields.io/badge/build-beta-yellow)]()
+[![npm](https://img.shields.io/badge/npm-v0.2.0-red)]()
+[![npm](https://img.shields.io/badge/licence-MIT-blue)]()
 
-## Contributors
+---
 
-Justin Logan
+## **Description**
+
+CSS utility library for, ⚡rapidly building good looking user interfaces.
+
+## **Documention**
+
+Visit [microncss.com]() for full documentation
+
+## **Instalation**
+
+**Node**
+
+```shell
+npm install microncss
+```
+
+**CDN**
+
+```html
+<link rel="stylesheet" href="" />
+```

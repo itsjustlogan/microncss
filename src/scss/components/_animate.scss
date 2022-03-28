@@ -1,61 +1,63 @@
+@use '../utils' as *;
+
 $animate: (
-  "scale": (
-    "prop": "transform",
-    "values": (
-      "0": scale(0),
-      "50": scale(.5),
-      "75": scale(.75),
-      "90": scale(.9),
-      "100": scale(1),
-      "110": scale(1.1),
-      "120": scale(1.2),
-      "150": scale(1.5),
+  'scale': (
+    'prop': 'transform',
+    'values': (
+      '0': scale(0),
+      '50': scale(0.5),
+      '75': scale(0.75),
+      '90': scale(0.9),
+      '100': scale(1),
+      '110': scale(1.1),
+      '120': scale(1.2),
+      '150': scale(1.5),
     ),
   ),
-  "scale-x": (
-    "prop": "transform",
-    "values": (
-      "0": scaleX(0),
-      "50": scaleX(.5),
-      "75": scaleX(.75),
-      "90": scaleX(.9),
-      "100": scaleX(1),
-      "110": scaleX(1.1),
-      "120": scaleX(1.2),
-      "150": scaleX(1.5),
+  'scale-x': (
+    'prop': 'transform',
+    'values': (
+      '0': scaleX(0),
+      '50': scaleX(0.5),
+      '75': scaleX(0.75),
+      '90': scaleX(0.9),
+      '100': scaleX(1),
+      '110': scaleX(1.1),
+      '120': scaleX(1.2),
+      '150': scaleX(1.5),
     ),
   ),
-  "scale-y": (
-    "prop": "transform",
-    "values": (
-      "0": scaleY(0),
-      "50": scaleY(.5),
-      "75": scaleY(.75),
-      "90": scaleY(.9),
-      "100": scaleY(1),
-      "110": scaleY(1.1),
-      "120": scaleY(1.2),
-      "150": scaleY(1.5),
+  'scale-y': (
+    'prop': 'transform',
+    'values': (
+      '0': scaleY(0),
+      '50': scaleY(0.5),
+      '75': scaleY(0.75),
+      '90': scaleY(0.9),
+      '100': scaleY(1),
+      '110': scaleY(1.1),
+      '120': scaleY(1.2),
+      '150': scaleY(1.5),
     ),
   ),
-  "fade": (
-    "prop": "animation",
-    "values": (
-      "1": fadein .15s ease-in,
-      "2": fadein .2s ease-in,
-      "3": fadein .3s ease-in,
-      "4": fadein .4s ease-in,
-      "5": fadein .5s ease-in,
+  'fade': (
+    'prop': 'animation',
+    'values': (
+      '1': fadein 0.15s ease-in,
+      '2': fadein 0.2s ease-in,
+      '3': fadein 0.3s ease-in,
+      '4': fadein 0.4s ease-in,
+      '5': fadein 0.5s ease-in,
     ),
   ),
-  "bounce-fade": (
-    "prop": "animation",
-    "values": (
-      "1": bouncefadein .15s ease-in,
-      "2": bouncefadein .2s ease-in,
-      "3": bouncefadein .3s ease-in,
-      "4": bouncefadein .4s ease-in,
-      "5": bouncefadein .5s ease-in,
+  'bounce-fade': (
+    'prop': 'animation',
+    'values': (
+      '1': bouncefadein 0.15s ease-in,
+      '2': bouncefadein 0.2s ease-in,
+      '3': bouncefadein 0.3s ease-in,
+      '4': bouncefadein 0.4s ease-in,
+      '5': bouncefadein 0.5s ease-in,
     ),
   ),
 );
@@ -88,16 +90,16 @@ $animate: (
 
 // generate utility classes
 @each $name, $map in $animate {
-  $prop: map-get($map, "prop");
-  $values: map-get($map, "values");
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .#{$name} {
         #{$prop}: $v;
       }
     } @else {
-      .#{$name}-#{$k}{
+      .#{$name}-#{$k} {
         #{$prop}: $v;
       }
     }
@@ -106,11 +108,11 @@ $animate: (
 
 // hover
 @each $name, $map in $animate {
-  $prop: map-get($map, "prop");
-  $values: map-get($map, "values");
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .hover\:#{$name}:hover {
         #{$prop}: $v;
       }
@@ -124,11 +126,11 @@ $animate: (
 
 // focus
 @each $name, $map in $animate {
-  $prop: map-get($map, "prop");
-  $values: map-get($map, "values");
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .focus\:#{$name}:focus {
         #{$prop}: $v;
       }
@@ -142,11 +144,11 @@ $animate: (
 
 // active
 @each $name, $map in $animate {
-  $prop: map-get($map, "prop");
-  $values: map-get($map, "values");
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .active\:#{$name}:active {
         #{$prop}: $v;
       }
