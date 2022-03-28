@@ -1,29 +1,6 @@
-<div class="logo">
-<div class="bg bg-size logo-img"></div>
-</div>
+![microncss-logo-goldwhite](https://user-images.githubusercontent.com/31719884/160313006-cce2e0a5-be0f-41ff-ab48-940ebeb2b7fe.png)
 
-<style>
-.logo {
-  display: grid;
-}
-
-.logo-img {
-  background-image: url("https://user-images.githubusercontent.com/31719884/160035466-c5e16e7a-b32a-41cc-8d5d-d62b3acc27b6.png");
-}
-
-.bg {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-size {
-  width: 100%;
-  height: 100px;
-}
-</style>
-
-A zero configuration self purging css utility library.
+A low configuration, fluff free, CSS utility library.
 
 [![npm](https://img.shields.io/badge/build-beta-yellow)]()
 [![npm](https://img.shields.io/badge/npm-v0.2.0-red)]()
@@ -33,22 +10,18 @@ A zero configuration self purging css utility library.
 
 ## **Description**
 
-CSS utility library for, ⚡rapidly building good looking user interfaces.
+⚡ CSS utility library for rapidly building stylish user interfaces.
 
 ## **Documention**
 
-Visit [microncss.com]() for full documentation
+Visit [website under development]() for full documentation
 
 ## **Instalation**
 
 **Node**
 
-```shell
-npm install microncss
-```
+coming soon...
 
 **CDN**
 
-```html
-<link rel="stylesheet" href="" />
-```
+New CDN coming soon...
