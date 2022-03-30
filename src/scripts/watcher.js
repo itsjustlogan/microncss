@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { buildSass } = require('./build')
-const { cleanCss } = require('./purge')
+const { cleanCss } = require('./clean')
 
 const cwd = process.cwd()
 
@@ -11,6 +11,8 @@ function parseDate() {
 
 const watcher = () => {
   let watching = false
+
+  cleanCss()
 
   console.log('[microncss] watching...👀')
 

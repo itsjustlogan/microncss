@@ -8,10 +8,6 @@ const fs = require('fs')
 const cwd = process.cwd()
 
 const cleanCss = () => {
-  const start = performance.now()
-
-  console.log('Cleaning CSS... 🧽')
-
   fs.readFile(`${cwd}/src/micron.css`, (err, css) => {
     postcss([
       autoprefixer,
@@ -44,9 +40,6 @@ const cleanCss = () => {
       console.log(`error: ${err.message}`)
     }
   })
-
-  const end = performance.now()
-  console.log(`⚡ Done in ${(end - start).toFixed(2)}ms`)
 }
 
 exports.cleanCss = cleanCss
