@@ -6,8 +6,8 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 const fs = require('fs')
 const { cwd } = require('./helpers/helper')
 
-const cleanCss = () => {
-  fs.readFile(`${cwd}/src/micron.css`, (err, css) => {
+const watcherBuilder = () => {
+  fs.readFile('reference.css', (err, css) => {
     postcss([
       autoprefixer,
       purgecss({
@@ -22,7 +22,7 @@ const cleanCss = () => {
       cssnano({ preset }),
     ])
       .process(css, {
-        from: `${cwd}/src/micron.css`,
+        from: 'reference.css',
         to: `${cwd}/src/micron.css`,
       })
       .then((result) => {
@@ -41,4 +41,4 @@ const cleanCss = () => {
   })
 }
 
-exports.cleanCss = cleanCss
+exports.watcherBuilder = watcherBuilder
