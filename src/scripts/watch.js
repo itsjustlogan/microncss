@@ -1,7 +1,6 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
-const { buildSass } = require('./build')
 const { watcherBuilder } = require('./watcherBuilder')
 const { errorText, log, logo, cwd } = require('./helpers/helper')
 
@@ -27,8 +26,6 @@ function parseDate() {
 
 const watcher = () => {
   let watching = false
-
-  buildSass()
 
   const watch = doesConfigExist()
 

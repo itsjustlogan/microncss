@@ -7,7 +7,7 @@ const fs = require('fs')
 const { cwd } = require('./helpers/helper')
 
 const cleanCss = () => {
-  fs.readFile(`${cwd}/src/micron.css`, (err, css) => {
+  fs.readFile(`${cwd}/node_modules/microncss/reference.css`, (err, css) => {
     postcss([
       autoprefixer,
       purgecss({

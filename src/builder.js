@@ -1,14 +1,20 @@
+#! /usr/bin/env node
+
 const { buildSass } = require('./scripts/build')
 const { whiteText, log, grayText } = require('./scripts/helpers/helper')
 
-const start = performance.now()
+const executeBuild = () => {
+  const start = performance.now()
 
-log(grayText('building styles...'))
+  log(grayText('building styles...'))
 
-buildSass()
+  buildSass()
 
-const end = performance.now()
+  const end = performance.now()
 
-log('')
-log(whiteText(`done in ${grayText(`${(end - start).toFixed(0)}ms.`)}`))
-log('')
+  log('')
+  log(whiteText(`done in ${grayText(`${(end - start).toFixed(0)}ms.`)}`))
+  log('')
+}
+
+exports.executeBuild = executeBuild

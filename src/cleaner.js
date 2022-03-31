@@ -1,13 +1,19 @@
+#! /usr/bin/env node
+
 const { cleanCss } = require('./scripts/clean')
 const { log, whiteText, grayText } = require('./scripts/helpers/helper')
 
-const start = performance.now()
+const executeProduction = () => {
+  const start = performance.now()
 
-log(grayText('🧽 cleaning css...'))
+  log(grayText('🧽 cleaning css...'))
 
-cleanCss()
+  cleanCss()
 
-const end = performance.now()
-log('')
-log(whiteText(`done in ${grayText(`${(end - start).toFixed(0)}ms`)} `))
-log('')
+  const end = performance.now()
+  log('')
+  log(whiteText(`done in ${grayText(`${(end - start).toFixed(0)}ms`)} `))
+  log('')
+}
+
+exports.executeProduction = executeProduction

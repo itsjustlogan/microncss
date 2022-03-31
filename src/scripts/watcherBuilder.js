@@ -7,7 +7,7 @@ const fs = require('fs')
 const { cwd } = require('./helpers/helper')
 
 const watcherBuilder = () => {
-  fs.readFile('reference.css', (err, css) => {
+  fs.readFile(`${cwd}/node_modules/microncss/reference.css`, (err, css) => {
     postcss([
       autoprefixer,
       purgecss({
@@ -19,7 +19,6 @@ const watcherBuilder = () => {
           `${cwd}/**/*.html`,
         ],
       }),
-      cssnano({ preset }),
     ])
       .process(css, {
         from: 'reference.css',

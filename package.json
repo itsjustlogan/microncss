@@ -1,17 +1,11 @@
 {
   "name": "microncss",
   "version": "0.2.0",
-  "description": "A low configuration blazingly fast css utility library.",
-  "main": "src/builder.js",
+  "description": "A fast, low configuration css utility library.",
+  "main": "src/index.js",
   "bin": {
-    "microncss": "src/builder.js",
-    "micron": "src/builder.js",
-    "microncss-build": "src/builder.js",
-    "micron-build": "src/builder.js",
-    "microncss-clean": "src/cleaner.js",
-    "micron-clean": "src/cleaner.js",
-    "microncss-watch": "src/watcher.js",
-    "micron-watch": "src/watcher.js"
+    "microncss": "src/index.js",
+    "micron": "src/index.js"
   },
   "targets": {
     "main": false,
@@ -21,9 +15,9 @@
     }
   },
   "scripts": {
-    "build": "node src/builder.js",
-    "clean": "node src/cleaner.js",
-    "watch": "node ./src/watcher.js",
+    "build": "node src/index.js",
+    "build:prod": "node src/index.js --build-prod",
+    "watch": "node ./src/index.js --watch",
     "build:cdn": "npx parcel build src/scss/micron.scss"
   },
   "keywords": [

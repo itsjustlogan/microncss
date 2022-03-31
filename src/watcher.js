@@ -1,3 +1,9 @@
+#! /usr/bin/env node
+
 const { watcher } = require('./scripts/watch')
 
-watcher()
+const executeWatcher = () => {
+  watcher()
+}
+
+exports.executeWatcher = executeWatcher
