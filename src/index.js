@@ -10,9 +10,14 @@ const executeMicroncss = () => {
 
   if (option === 'init' || option === '--init') {
     microncssInit()
-  } else if (option === '--build-prod') {
+    executeBuild()
+  } else if (
+    option === '--build-prod' ||
+    option === 'build' ||
+    option === '--build'
+  ) {
     executeProduction()
-  } else if (option === '--watch') {
+  } else if (option === '--watch' || option === 'watch') {
     executeWatcher()
   } else {
     executeBuild()

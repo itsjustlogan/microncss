@@ -17,6 +17,7 @@
     "import/no-extraneous-dependencies": "off",
     "prefer-destructuring": "off",
     "no-unused-vars": "warn",
-    "global-require": "off"
+    "global-require": "off",
+    "operator-linebreak": "off"
   }
 }

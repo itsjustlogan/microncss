@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { cwd, log, errorText, grayText } = require('./helpers/helper')
+const { cwd, log, errorText, grayText, logo } = require('./helpers/helper')
 const configContent = require('../config/microncss.config.json')
 
 const microncssInit = () => {
@@ -13,6 +13,8 @@ const microncssInit = () => {
         console.error(err.message)
       } else {
         log(grayText('Success! ✅'))
+        log('')
+        log(grayText(`Created config file: ${logo('microncss.config.json')}`))
         log('')
       }
     }

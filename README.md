@@ -18,7 +18,7 @@ Visit [website under development]() for full documentation
 
 ## **Instalation**
 
-**Node**
+**NPM**
 
 coming soon...
 

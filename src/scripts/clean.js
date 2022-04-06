@@ -13,10 +13,14 @@ const cleanCss = () => {
       purgecss({
         content: [
           `${cwd}/*.html`,
-          `${cwd}/public/*.html`,
-          `${cwd}/src/*.html`,
-          `${cwd}/src/**/*.html`,
           `${cwd}/**/*.html`,
+          `${cwd}/**/**/*.html`,
+          `${cwd}/**/*.vue`,
+          `${cwd}/**/**/*.vue`,
+          `${cwd}/**/*.jsx`,
+          `${cwd}/**/**/*.jsx`,
+          `${cwd}/**/*.tsx`,
+          `${cwd}/**/**/*.tsx`,
         ],
       }),
       cssnano({ preset }),

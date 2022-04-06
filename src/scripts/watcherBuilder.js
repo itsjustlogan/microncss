@@ -1,7 +1,5 @@
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
-const cssnano = require('cssnano')
-const preset = require('cssnano-preset-default')
 const purgecss = require('@fullhuman/postcss-purgecss')
 const fs = require('fs')
 const { cwd } = require('./helpers/helper')
@@ -13,10 +11,14 @@ const watcherBuilder = () => {
       purgecss({
         content: [
           `${cwd}/*.html`,
-          `${cwd}/public/*.html`,
-          `${cwd}/src/*.html`,
-          `${cwd}/src/**/*.html`,
           `${cwd}/**/*.html`,
+          `${cwd}/**/**/*.html`,
+          `${cwd}/**/*.vue`,
+          `${cwd}/**/**/*.vue`,
+          `${cwd}/**/*.jsx`,
+          `${cwd}/**/**/*.jsx`,
+          `${cwd}/**/*.tsx`,
+          `${cwd}/**/**/*.tsx`,
         ],
       }),
     ])
