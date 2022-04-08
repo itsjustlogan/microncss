@@ -3,7 +3,7 @@
 A low configuration, fluff free, CSS utility library.
 
 [![npm](https://img.shields.io/badge/build-beta-yellow)]()
-[![npm](https://img.shields.io/badge/npm-v0.2.0-red)]()
+[![npm](https://img.shields.io/badge/npm-v0.3.0-red)]()
 [![npm](https://img.shields.io/badge/licence-MIT-blue)]()
 
 ---
