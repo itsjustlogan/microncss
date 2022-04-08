@@ -1,6 +1,10 @@
-# Base Styles
+# Styles
 
-## Reset
+## Base
+
+### Reset
+
+Basic CSS reset
 
 ```css
 * {
@@ -13,7 +17,11 @@
 *::after {
   box-sizing: border-box;
 }
+```
 
+### Default styling
+
+```css
 :root {
   font-size: calc(0.5em + 1vw);
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,3 +33,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 ```
+
+<style>
+  table {
+    height: 350px;
+    overflow-y: scroll;
+  }
+  td {
+    border: none;
+    width: auto;
+    padding-left: 1em;
+    padding-right: 12rem;
+  }
+
+  .h-auto {
+    height: auto;
+  }
+</style>
