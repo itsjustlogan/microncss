@@ -19,6 +19,174 @@ $extra: (
       'default': capitalize,
     ),
   ),
+  'flex': (
+    'prop': 'display',
+    'values': (
+      'default': flex,
+    ),
+  ),
+  'grid': (
+    'prop': 'display',
+    'values': (
+      'defualt': grid,
+    ),
+  ),
+  'block': (
+    'prop': 'display',
+    'values': (
+      'defualt': block,
+    ),
+  ),
+  'inline': (
+    'prop': 'display',
+    'values': (
+      'defualt': inline,
+    ),
+  ),
+  'inline\-block': (
+    'prop': 'display',
+    'values': (
+      'defualt': inline-block,
+    ),
+  ),
+  'inline\-flex': (
+    'prop': 'display',
+    'values': (
+      'defualt': inline-flex,
+    ),
+  ),
+  'inline\-grid': (
+    'prop': 'display',
+    'values': (
+      'defualt': inline-grid,
+    ),
+  ),
+  'contents': (
+    'prop': 'display',
+    'values': (
+      'defualt': contents,
+    ),
+  ),
+  'hidden': (
+    'prop': 'display',
+    'values': (
+      'defualt': none,
+    ),
+  ),
+  'col': (
+    'prop': 'grid-column',
+    'values': (
+      'auto': auto,
+      'span\-1': #{'span 1 / span 1'},
+      'span\-2': #{'span 2 / span 2'},
+      'span\-3': #{'span 3 / span 3'},
+      'span\-4': #{'span 4 / span 4'},
+      'span\-5': #{'span 5 / span 5'},
+      'span\-6': #{'span 6 / span 6'},
+      'span\-7': #{'span 7 / span 7'},
+      'span\-8': #{'span 8 / span 8'},
+      'span\-9': #{'span 9 / span 9'},
+      'span\-10': #{'span 10 / span 10'},
+      'span\-11': #{'span 11 / span 11'},
+      'span\-12': #{'span 12 / span 12'},
+      'span\-full': #{'1 / -12'},
+    ),
+  ),
+  'col-start': (
+    'prop': 'grid-column-start',
+    'values': (
+      'auto': auto,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      '10': 10,
+      '11': 11,
+      '12': 12,
+      '13': 13,
+    ),
+  ),
+  'col-end': (
+    'prop': 'grid-column-end',
+    'values': (
+      'auto': auto,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      '10': 10,
+      '11': 11,
+      '12': 12,
+      '13': 13,
+    ),
+  ),
+  'row': (
+    'prop': 'grid-row',
+    'values': (
+      'auto': auto,
+      'span\-1': #{'span 1 / span 1'},
+      'span\-2': #{'span 2 / span 2'},
+      'span\-3': #{'span 3 / span 3'},
+      'span\-4': #{'span 4 / span 4'},
+      'span\-5': #{'span 5 / span 5'},
+      'span\-6': #{'span 6 / span 6'},
+      'span\-7': #{'span 7 / span 7'},
+      'span\-8': #{'span 8 / span 8'},
+      'span\-9': #{'span 9 / span 9'},
+      'span\-10': #{'span 10 / span 10'},
+      'span\-11': #{'span 11 / span 11'},
+      'span\-12': #{'span 12 / span 12'},
+      'span\-full': #{'1 / -12'},
+    ),
+  ),
+  'row-start': (
+    'prop': 'grid-row-start',
+    'values': (
+      'auto': auto,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      '10': 10,
+      '11': 11,
+      '12': 12,
+      '13': 13,
+    ),
+  ),
+  'row-end': (
+    'prop': 'grid-row-end',
+    'values': (
+      'auto': auto,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      '10': 10,
+      '11': 11,
+      '12': 12,
+      '13': 13,
+    ),
+  ),
 );
 
 // generate utility classes
@@ -94,6 +262,28 @@ $extra: (
 }
 
 // breakpoints
+// extra small
+@each $name, $map in $extra {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .sm\:#{$name} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
 // small
 @each $name, $map in $extra {
   $prop: map-get($map, 'prop');

@@ -1,51 +1,126 @@
 @use '../utils' as *;
 
 $two-prop: (
-  "px": (
-    "prop1": "padding-left",
-    "prop2": "padding-right",
-    "values": (
-      "1": $base-padding,
-      "2": $base-padding * 2,
-      "3": $base-padding * 4,
-      "4": $base-padding * 6,
-      "5": $base-padding * 8,
+  'px': (
+    'prop1': 'padding-left',
+    'prop2': 'padding-right',
+    'values': (
+      '0': 0,
+      '0#{\.}5': calc($base-padding / 2),
+      '1': $base-padding,
+      '1#{\.}5': $base-padding * 2,
+      '2': $base-padding * 3,
+      '2#{\.}5': $base-padding * 4,
+      '3': $base-padding * 5,
+      '3#{\.}5': $base-padding * 6,
+      '4': $base-padding * 7,
+      '5': $base-padding * 8,
+      '6': $base-padding * 10,
+      '7': $base-padding * 12,
+      '8': $base-padding * 14,
+      '9': $base-padding * 16,
+      '10': $base-padding * 18,
+      '11': $base-padding * 20,
+      '12': $base-padding * 22,
+      '14': $base-padding * 24,
+      '16': $base-padding * 26,
+      '20': $base-padding * 28,
+      '24': $base-padding * 30,
+      '28': $base-padding * 32,
+      '32': $base-padding * 40,
+      '36': $base-padding * 48,
+      '40': $base-padding * 56,
+      '44': $base-padding * 64,
+      '48': $base-padding * 72,
+      '52': $base-padding * 80,
+      '54': $base-padding * 88,
+      '58': $base-padding * 96,
+      '62': $base-padding * 104,
+      '66': $base-padding * 112,
+      '72': $base-padding * 120,
+      '80': $base-padding * 128,
+      '88': $base-padding * 144,
+      '96': $base-padding * 160,
+      '104': $base-padding * 176,
+      '112': $base-padding * 192,
+      '120': $base-padding * 208,
+      '128': $base-padding * 224,
+      '136': $base-padding * 240,
+      '144': $base-padding * 256,
     ),
   ),
-  "mx": (
-    "prop1": "margin-left",
-    "prop2": "margin-right",
-    "values": (
-      "1": $base-margin,
-      "2": $base-margin * 2,
-      "3": $base-margin * 4,
-      "4": $base-margin * 6,
-      "5": $base-margin * 8,
+  'mx': (
+    'prop1': 'margin-left',
+    'prop2': 'margin-right',
+    'values': (
+      '0': 0,
+      'auto': auto,
+      '0#{\.}5': calc($base-margin / 2),
+      '1': $base-margin,
+      '1#{\.}5': $base-margin * 2,
+      '2': $base-margin * 3,
+      '2#{\.}5': $base-margin * 4,
+      '3': $base-margin * 5,
+      '3#{\.}5': $base-margin * 6,
+      '4': $base-margin * 7,
+      '5': $base-margin * 8,
+      '6': $base-margin * 10,
+      '7': $base-margin * 12,
+      '8': $base-margin * 14,
+      '9': $base-margin * 16,
+      '10': $base-margin * 18,
+      '11': $base-margin * 20,
+      '12': $base-margin * 22,
+      '14': $base-margin * 24,
+      '16': $base-margin * 26,
+      '20': $base-margin * 28,
+      '24': $base-margin * 30,
+      '28': $base-margin * 32,
+      '32': $base-margin * 40,
+      '36': $base-margin * 48,
+      '40': $base-margin * 56,
+      '44': $base-margin * 64,
+      '48': $base-margin * 72,
+      '52': $base-margin * 80,
+      '54': $base-margin * 88,
+      '58': $base-margin * 96,
+      '62': $base-margin * 104,
+      '66': $base-margin * 112,
+      '72': $base-margin * 120,
+      '80': $base-margin * 128,
+      '88': $base-margin * 144,
+      '96': $base-margin * 160,
+      '104': $base-margin * 176,
+      '112': $base-margin * 192,
+      '120': $base-margin * 208,
+      '128': $base-margin * 224,
+      '136': $base-margin * 240,
+      '144': $base-margin * 256,
     ),
   ),
-  "center": (
-    "prop1": "justify-content",
-    "prop2": "align-content",
-    "values": (
-      "default": center,
+  'center': (
+    'prop1': 'justify-content',
+    'prop2': 'align-content',
+    'values': (
+      'default': center,
     ),
   ),
 );
 
 // generate utility classes
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .#{$name} {
         #{$prop1}: $v;
         #{$prop2}: $v;
       }
     } @else {
-      .#{$name}-#{$k}{
+      .#{$name}-#{$k} {
         #{$prop1}: $v;
         #{$prop2}: $v;
       }
@@ -55,12 +130,12 @@ $two-prop: (
 
 // hover
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .hover\:#{$name}:hover {
         #{$prop1}: $v;
         #{$prop2}: $v;
@@ -76,12 +151,12 @@ $two-prop: (
 
 // focus
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .focus\:#{$name}:focus {
         #{$prop1}: $v;
         #{$prop2}: $v;
@@ -97,12 +172,12 @@ $two-prop: (
 
 // active
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .active\:#{$name}:active {
         #{$prop1}: $v;
         #{$prop2}: $v;
@@ -117,25 +192,50 @@ $two-prop: (
 }
 
 // breakpoints
-// small
+// extra small
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
+      .sm\:#{$name} {
+        @include xs {
+          #{$prop1}: $v;
+          #{$prop2}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include xs {
+          #{$prop1}: $v;
+          #{$prop2}: $v;
+        }
+      }
+    }
+  }
+}
+
+// small
+@each $name, $map in $two-prop {
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
       .sm\:#{$name} {
         @include sm {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     } @else {
       .sm\:#{$name}-#{$k} {
         @include sm {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     }
@@ -144,23 +244,23 @@ $two-prop: (
 
 // medium
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .md\:#{$name} {
         @include md {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     } @else {
       .md\:#{$name}-#{$k} {
         @include md {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     }
@@ -169,23 +269,23 @@ $two-prop: (
 
 // large
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .lg\:#{$name} {
         @include lg {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     } @else {
       .lg\:#{$name}-#{$k} {
         @include lg {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     }
@@ -194,23 +294,23 @@ $two-prop: (
 
 // extra large
 @each $name, $map in $two-prop {
-  $prop1: map-get($map, "prop1");
-  $prop2: map-get($map, "prop2");
-  $values: map-get($map, "values");
+  $prop1: map-get($map, 'prop1');
+  $prop2: map-get($map, 'prop2');
+  $values: map-get($map, 'values');
 
   @each $k, $v in $values {
-    @if($k == "default") {
+    @if ($k == 'default') {
       .xl\:#{$name} {
         @include xl {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     } @else {
       .xl\:#{$name}-#{$k} {
         @include xl {
           #{$prop1}: $v;
-          #{$prop2}: $v;  
+          #{$prop2}: $v;
         }
       }
     }

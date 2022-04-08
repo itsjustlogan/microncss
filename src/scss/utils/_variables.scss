@@ -1,19 +1,16 @@
 // Base values //
 
 //padding
-$base-padding: .75em;
+$base-padding: 0.125em;
 
 // margin
-$base-margin: .75rem;
+$base-margin: 0.125rem;
 
 // font
 $base-font: 1rem;
 
-// width
-$base-width: 10%;
-
-// height
-$base-height: 10%;
+// width / height, gap, flex basis & top/bottom/left/right
+$base-rem: 0.125rem;
 
 // opacity
 $base-opacity: 0.1;

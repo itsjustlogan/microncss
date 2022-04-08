@@ -18,7 +18,7 @@
     "build": "node src/index.js",
     "build:prod": "node src/index.js --build-prod",
     "watch": "node ./src/index.js --watch",
-    "build:cdn": "npx parcel build src/scss/micron.scss"
+    "build:cdn": "rm -rf src/cdn && npx parcel build"
   },
   "keywords": [
     "css",
@@ -30,6 +30,7 @@
   "author": "Justin Logan",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.0",
     "autoprefixer": "^10.4.4",
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",

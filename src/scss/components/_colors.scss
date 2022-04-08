@@ -613,6 +613,28 @@ $colors: (
 }
 
 // breakpoints
+// extra small
+@each $name, $map in $colors {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .sm\:#{$name} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
 // small
 @each $name, $map in $colors {
   $prop: map-get($map, 'prop');
