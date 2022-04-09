@@ -20,7 +20,9 @@ Visit [website under development]() for full documentation
 
 **NPM**
 
-coming soon...
+```shell
+npm install microncss
+```
 
 **CDN**
 

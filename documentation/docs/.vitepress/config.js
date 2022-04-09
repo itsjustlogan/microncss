@@ -10,6 +10,7 @@ const stylesSidebar = [
   { text: 'Spacing', link: '/micron-styles/spacing' },
   { text: 'Sizing', link: '/micron-styles/sizing' },
   { text: 'Layout', link: '/micron-styles/layout' },
+  { text: 'Grid/Flexbox', link: '/micron-styles/grid-flex' },
   { text: 'Borders', link: '/micron-styles/border' },
   { text: 'Backgrounds', link: '/micron-styles/background' },
   { text: 'Interactive', link: '/micron-styles/interactive' },

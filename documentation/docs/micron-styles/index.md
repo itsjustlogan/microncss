@@ -35,18 +35,8 @@ body {
 ```
 
 <style>
-  table {
-    height: 350px;
-    overflow-y: scroll;
-  }
   td {
-    border: none;
-    width: auto;
-    padding-left: 1em;
-    padding-right: 12rem;
-  }
-
-  .h-auto {
-    height: auto;
+    padding-block: 1.25em;
+    /* border: none; */
   }
 </style>

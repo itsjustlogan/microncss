@@ -3,31 +3,43 @@
 ## Aspect Ratio
 
 <table class="h-auto">
-<tr>
-<td>aspect-auto</td>
-<td>aspect-ratio: auto;</td>
-</tr>
-<tr>
-<td>aspect-square</td>
-<td>aspect-ratio: 1 / 1;</td>
-</tr>
-<tr>
-<td>aspect-video</td>
-<td>aspect-ratio: 16 / 9;</td>
-</tr>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>aspect-auto</td>
+      <td>aspect-ratio: auto;</td>
+    </tr>
+    <tr>
+      <td>aspect-square</td>
+      <td>aspect-ratio: 1 / 1;</td>
+    </tr>
+    <tr>
+      <td>aspect-video</td>
+      <td>aspect-ratio: 16 / 9;</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Box Sizing
 
 <table class="h-auto">
-<tr>
-<td>box-border</td>
-<td>border-sizing: border-box;</td>
-</tr>
-<tr>
-<td>box-content</td>
-<td>border-sizing: content-box;</td>
-</tr>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>box-border</td>
+      <td>border-sizing: border-box;</td>
+    </tr>
+    <tr>
+      <td>box-content</td>
+      <td>border-sizing: content-box;</td>
+    </tr>
+  </tbody>
 </table>
 
 **E.g.**
@@ -41,71 +53,88 @@
 ## Float
 
 <table class="h-auto">
-<tr>
-<td>float-right</td>
-<td>float: right;</td>
-</tr>
-<tr>
-<td>float-left</td>
-<td>float: left;</td>
-</tr>
-<tr>
-<td>float-none</td>
-<td>float: none;</td>
-</tr>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>float-right</td>
+      <td>float: right;</td>
+    </tr>
+    <tr>
+      <td>float-left</td>
+      <td>float: left;</td>
+    </tr>
+    <tr>
+      <td>float-none</td>
+      <td>float: none;</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Display
 
-<table class="h-auto">
-<tr>
-<td>d-flex</td>
-<td>display: flex;</td>
-</tr>
-<tr>
-<td>d-grid</td>
-<td>display: grid;</td>
-</tr>
-<tr>
-<td>d-block</td>
-<td>display: block;</td>
-</tr>
-<tr>
-<td>d-inline-block</td>
-<td>display: inline-block;</td>
-</tr>
+<table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>flex</td>
+      <td>display: flex;</td>
+    </tr>
+    <tr>
+      <td>grid</td>
+      <td>display: grid;</td>
+    </tr>
+    <tr>
+      <td>block</td>
+      <td>display: block;</td>
+    </tr>
+    <tr>
+      <td>inline</td>
+      <td>display: inline;</td>
+    </tr>
+    <tr>
+      <td>inline-block</td>
+      <td>display: inline-block;</td>
+    </tr>
+    <tr>
+      <td>inline-flex</td>
+      <td>display: inline-flex;</td>
+    </tr>
+    <tr>
+      <td>inline-grid</td>
+      <td>display: inline-grid;</td>
+    </tr>
+    <tr>
+      <td>contents</td>
+      <td>display: contents;</td>
+    </tr>
+    <tr>
+      <td>hidden</td>
+      <td>display: none;</td>
+    </tr>
+  </tbody>
 </table>
 
-## Flex Direction
+## Center
 
 <table class="h-auto">
-<tr>
-<td>flex-col</td>
-<td>flex-direction: column;</td>
-</tr>
-<tr>
-<td>flex-col-rev</td>
-<td>flex-direction: column-reverse;</td>
-</tr>
-<tr>
-<td>flex-row</td>
-<td>flex-direction: row;</td>
-</tr>
-<tr>
-<td>flex-row-rev</td>
-<td>flex-direction: row-reverse;</td>
-</tr>
-</table>
-
-### Center
-
-<table class="h-auto">
-<tr>
-<td>center</td>
-<td>justify-content: center; <br>
-align-content: center;
-</td>
-</tr>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>center</td>
+      <td>justify-content: center; <br>
+      align-content: center;
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 **E.g.**
@@ -119,24 +148,6 @@ align-content: center;
   </ul>
 </nav>
 ```
-
-## Justify Content
-
-<table class="h-auto">
-<tr>
-<td>justify</td>
-<td>justify-content: center;</td>
-</tr>
-</table>
-
-## Align Items
-
-<table class="h-auto">
-<tr>
-<td>align</td>
-<td>align-items: center;</td>
-</tr>
-</table>
 
 ## Position
 
