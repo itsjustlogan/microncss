@@ -1,11 +1,5 @@
 node_modules
 .parcel-cache
-public/
-src/micron.css
-index.html
-src/scripts/errorHandler.js
-reference.css
-other.scss
 documentation/proto-cleaner.md
 documentation/proptocleaner2.md
 documentation/prototype.md
