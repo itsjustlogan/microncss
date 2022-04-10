@@ -76,6 +76,185 @@
   </tbody>
 </table>
 
+## Grid Column Start / End
+
+<table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>col-auto</td>
+      <td>grid-column: auto</td>
+    </tr>
+    <tr>
+      <td>col-span-1</td>
+      <td>grid-column: span 1 / span 1;</td>
+    </tr>
+    <tr>
+      <td>col-span-2</td>
+      <td>grid-column: span 2 / span 2;</td>
+    </tr>
+    <tr>
+      <td>col-span-3</td>
+      <td>grid-column: span 3 / span 3;</td>
+    </tr>
+    <tr>
+      <td>col-span-4</td>
+      <td>grid-column: span 4 / span 4;</td>
+    </tr>
+    <tr>
+      <td>col-span-5</td>
+      <td>grid-column: span 5 / span 5;</td>
+    </tr>
+    <tr>
+      <td>col-span-6</td>
+      <td>grid-column: span 6 / span 6;</td>
+    </tr>
+    <tr>
+      <td>col-span-7</td>
+      <td>grid-column: span 7 / span 7;</td>
+    </tr>
+    <tr>
+      <td>col-span-8</td>
+      <td>grid-column: span 8 / span 8;</td>
+    </tr>
+    <tr>
+      <td>col-span-1</td>
+      <td>grid-column: span 9 / span 9;</td>
+    </tr>
+    <tr>
+      <td>col-span-10</td>
+      <td>grid-column: span 10 / span 10;</td>
+    </tr>
+    <tr>
+      <td>col-span-11</td>
+      <td>grid-column: span 11 / span 11;</td>
+    </tr>
+    <tr>
+      <td>col-span-12</td>
+      <td>grid-column: span 12 / span 12;</td>
+    </tr>
+    <tr>
+      <td>col-span-full</td>
+      <td>grid-column: 1 / -1;</td>
+    </tr>
+    <tr>
+      <td>col-start-auto</td>
+      <td>grid-column-start: auto;</td>
+    </tr>
+    <tr>
+      <td>col-start-1</td>
+      <td>grid-column-start: 1;</td>
+    </tr>
+    <tr>
+      <td>col-start-2</td>
+      <td>grid-column-start: 2;</td>
+    </tr>
+    <tr>
+      <td>col-start-3</td>
+      <td>grid-column-start: 3;</td>
+    </tr>
+    <tr>
+      <td>col-start-4</td>
+      <td>grid-column-start: 4;</td>
+    </tr>
+    <tr>
+      <td>col-start-5</td>
+      <td>grid-column-start: 5;</td>
+    </tr>
+    <tr>
+      <td>col-start-6</td>
+      <td>grid-column-start: 6;</td>
+    </tr>
+    <tr>
+      <td>col-start-7</td>
+      <td>grid-column-start: 7;</td>
+    </tr>
+    <tr>
+      <td>col-start-8</td>
+      <td>grid-column-start: 8;</td>
+    </tr>
+    <tr>
+      <td>col-start-9</td>
+      <td>grid-column-start: 9;</td>
+    </tr>
+    <tr>
+      <td>col-start-10</td>
+      <td>grid-column-start: 10;</td>
+    </tr>
+    <tr>
+      <td>col-start-11</td>
+      <td>grid-column-start: 11;</td>
+    </tr>
+    <tr>
+      <td>col-start-12</td>
+      <td>grid-column-start: 12;</td>
+    </tr>
+    <tr>
+      <td>col-start-13</td>
+      <td>grid-column-start: 13;</td>
+    </tr>
+    <tr>
+      <td>col-end-auto</td>
+      <td>grid-column-end: auto;</td>
+    </tr>
+    <tr>
+      <td>col-end-1</td>
+      <td>grid-column-end: 1;</td>
+    </tr>
+    <tr>
+      <td>col-end-2</td>
+      <td>grid-column-end: 2;</td>
+    </tr>
+    <tr>
+      <td>col-end-3</td>
+      <td>grid-column-end: 3;</td>
+    </tr>
+    <tr>
+      <td>col-end-4</td>
+      <td>grid-column-end: 4;</td>
+    </tr>
+    <tr>
+      <td>col-end-5</td>
+      <td>grid-column-end: 5;</td>
+    </tr>
+    <tr>
+      <td>col-end-6</td>
+      <td>grid-column-end: 6;</td>
+    </tr>
+    <tr>
+      <td>col-end-7</td>
+      <td>grid-column-end: 7;</td>
+    </tr>
+    <tr>
+      <td>col-end-8</td>
+      <td>grid-column-end: 8;</td>
+    </tr>
+    <tr>
+      <td>col-end-9</td>
+      <td>grid-column-end: 9;</td>
+    </tr>
+    <tr>
+      <td>col-end-10</td>
+      <td>grid-column-end: 10;</td>
+    </tr>
+    <tr>
+      <td>col-end-11</td>
+      <td>grid-column-end: 11;</td>
+    </tr>
+    <tr>
+      <td>col-end-12</td>
+      <td>grid-column-end: 12;</td>
+    </tr>
+    <tr>
+      <td>col-end-13</td>
+      <td>grid-column-end: 13;</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Grid Template Rows
 
 <table>
@@ -149,6 +328,185 @@
       <td>grid-template-rows: repeat(12, minmax(0, 12fr));
       </td>
     </tr>
+  </tbody>
+</table>
+
+## Grid Row Start / End
+
+<table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>row-auto</td>
+      <td>grid-row: auto</td>
+    </tr>
+    <tr>
+      <td>row-span-1</td>
+      <td>grid-row: span 1 / span 1;</td>
+    </tr>
+    <tr>
+      <td>row-span-2</td>
+      <td>grid-row: span 2 / span 2;</td>
+    </tr>
+    <tr>
+      <td>row-span-3</td>
+      <td>grid-row: span 3 / span 3;</td>
+    </tr>
+    <tr>
+      <td>row-span-4</td>
+      <td>grid-row: span 4 / span 4;</td>
+    </tr>
+    <tr>
+      <td>row-span-5</td>
+      <td>grid-row: span 5 / span 5;</td>
+    </tr>
+    <tr>
+      <td>row-span-6</td>
+      <td>grid-row: span 6 / span 6;</td>
+    </tr>
+    <tr>
+      <td>row-span-7</td>
+      <td>grid-row: span 7 / span 7;</td>
+    </tr>
+    <tr>
+      <td>row-span-8</td>
+      <td>grid-row: span 8 / span 8;</td>
+    </tr>
+    <tr>
+      <td>row-span-1</td>
+      <td>grid-row: span 9 / span 9;</td>
+    </tr>
+    <tr>
+      <td>row-span-10</td>
+      <td>grid-row: span 10 / span 10;</td>
+    </tr>
+    <tr>
+      <td>row-span-11</td>
+      <td>grid-row: span 11 / span 11;</td>
+    </tr>
+    <tr>
+      <td>row-span-12</td>
+      <td>grid-row: span 12 / span 12;</td>
+    </tr>
+    <tr>
+      <td>row-span-full</td>
+      <td>grid-row: 1 / -1;</td>
+    </tr>
+    <tr>
+      <td>row-start-auto</td>
+      <td>grid-row-start: auto;</td>
+    </tr>
+    <tr>
+      <td>row-start-1</td>
+      <td>grid-row-start: 1;</td>
+    </tr>
+    <tr>
+      <td>row-start-2</td>
+      <td>grid-row-start: 2;</td>
+    </tr>
+    <tr>
+      <td>row-start-3</td>
+      <td>grid-row-start: 3;</td>
+    </tr>
+    <tr>
+      <td>row-start-4</td>
+      <td>grid-row-start: 4;</td>
+    </tr>
+    <tr>
+      <td>row-start-5</td>
+      <td>grid-row-start: 5;</td>
+    </tr>
+    <tr>
+      <td>row-start-6</td>
+      <td>grid-row-start: 6;</td>
+    </tr>
+    <tr>
+      <td>row-start-7</td>
+      <td>grid-row-start: 7;</td>
+    </tr>
+    <tr>
+      <td>row-start-8</td>
+      <td>grid-row-start: 8;</td>
+    </tr>
+    <tr>
+      <td>row-start-9</td>
+      <td>grid-row-start: 9;</td>
+    </tr>
+    <tr>
+      <td>row-start-10</td>
+      <td>grid-row-start: 10;</td>
+    </tr>
+    <tr>
+      <td>row-start-11</td>
+      <td>grid-row-start: 11;</td>
+    </tr>
+    <tr>
+      <td>row-start-12</td>
+      <td>grid-row-start: 12;</td>
+    </tr>
+    <tr>
+      <td>row-start-13</td>
+      <td>grid-row-start: 13;</td>
+    </tr>
+    <tr>
+      <td>row-end-auto</td>
+      <td>grid-row-end: auto;</td>
+    </tr>
+    <tr>
+      <td>row-end-1</td>
+      <td>grid-row-end: 1;</td>
+    </tr>
+    <tr>
+      <td>row-end-2</td>
+      <td>grid-row-end: 2;</td>
+    </tr>
+    <tr>
+      <td>row-end-3</td>
+      <td>grid-row-end: 3;</td>
+    </tr>
+    <tr>
+      <td>row-end-4</td>
+      <td>grid-row-end: 4;</td>
+    </tr>
+    <tr>
+      <td>row-end-5</td>
+      <td>grid-row-end: 5;</td>
+    </tr>
+    <tr>
+      <td>row-end-6</td>
+      <td>grid-row-end: 6;</td>
+    </tr>
+    <tr>
+      <td>row-end-7</td>
+      <td>grid-row-end: 7;</td>
+    </tr>
+    <tr>
+      <td>row-end-8</td>
+      <td>grid-row-end: 8;</td>
+    </tr>
+    <tr>
+      <td>row-end-9</td>
+      <td>grid-row-end: 9;</td>
+    </tr>
+    <tr>
+      <td>row-end-10</td>
+      <td>grid-row-end: 10;</td>
+    </tr>
+    <tr>
+      <td>row-end-11</td>
+      <td>grid-row-end: 11;</td>
+    </tr>
+    <tr>
+      <td>row-end-12</td>
+      <td>grid-row-end: 12;</td>
+    </tr>
+    <tr>
+      <td>row-end-13</td>
+      <td>grid-row-end: 13;</td>
+    </tr>    
   </tbody>
 </table>
 
@@ -1381,6 +1739,23 @@
     <tr>
       <td>align-self-stretch</td>
       <td>align-self: stretch;</td>
+    </tr>
+  </tbody>
+</table>
+
+## Center
+
+<table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+  <tbody>
+    <tr>
+      <td>center</td>
+      <td>justify-content: center; <br>
+      align-items: center;
+      </td>
     </tr>
   </tbody>
 </table>

@@ -73,6 +73,24 @@ $extra: (
       'defualt': none,
     ),
   ),
+  'fixed': (
+    'prop': 'position',
+    'values': (
+      'defualt': fixed,
+    ),
+  ),
+  'relative': (
+    'prop': 'position',
+    'values': (
+      'defualt': relative,
+    ),
+  ),
+  'absolute': (
+    'prop': 'position',
+    'values': (
+      'defualt': absolute,
+    ),
+  ),
   'col': (
     'prop': 'grid-column',
     'values': (
@@ -89,7 +107,7 @@ $extra: (
       'span\-10': #{'span 10 / span 10'},
       'span\-11': #{'span 11 / span 11'},
       'span\-12': #{'span 12 / span 12'},
-      'span\-full': #{'1 / -12'},
+      'span\-full': #{'1 / -1'},
     ),
   ),
   'col-start': (
@@ -146,7 +164,7 @@ $extra: (
       'span\-10': #{'span 10 / span 10'},
       'span\-11': #{'span 11 / span 11'},
       'span\-12': #{'span 12 / span 12'},
-      'span\-full': #{'1 / -12'},
+      'span\-full': #{'1 / -1'},
     ),
   ),
   'row-start': (
