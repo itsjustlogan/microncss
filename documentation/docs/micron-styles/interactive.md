@@ -75,10 +75,10 @@
   </tbody>
 </table>
 
-**Basic E.g.**
+#### Usage
 
 ```html
-<div class="cursor-pointer w-10">
+<div class="cursor-pointer w-72">
   <img src="/lovelydog.png" alt="my lovely dog Rosie" class="w-full" />
 </div>
 ```

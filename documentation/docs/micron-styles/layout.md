@@ -42,7 +42,7 @@
   </tbody>
 </table>
 
-**E.g.**
+#### Usage
 
 ```html
 <div class="box-border aspect-video w-full">
@@ -120,11 +120,11 @@
   </tbody>
 </table>
 
-**E.g.**
+#### Usage
 
 ```html
-<nav class="float-right z-100">
-  <ul class="d-flex">
+<nav class="float-right">
+  <ul class="flex">
     <li>Home</li>
     <li>About</li>
     <li>Contact</li>

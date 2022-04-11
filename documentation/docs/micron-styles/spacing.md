@@ -1209,18 +1209,18 @@
   </tbody>
 </table>
 
-**Padding E.g.**
+#### Usage
+
+<!-- **Use "p-{n}, pl-{n}, pr-{n}, pt-{n}, pb-{n}, py-{n}, px-{n}" to set the padding for an element of n value.** -->
+
+**Use p{arg}-{n} to set the padding for an element of n value.**
 
 ```html
-<div class="d-flex w-full">
-  <a
-    href="www.randomlink.com"
-    target="_blank"
-    class="text-white-100 bg-blue-300 py-1 px-2 uppercase border-radius m-auto mt-2 decor-none"
-  >
-    Go Now
-  </a>
-</div>
+<button class="py-2 px-4">Click Me</button>
+<!-- 
+"py-2" sets padding block to 0.375em (_6px_), 
+and "px-4" sets padding left & right to 0.875em (_14px_). 
+-->
 ```
 
 ## Margin
@@ -1228,7 +1228,7 @@
 <table>
   <div class="table-head">
     <div class="font-bld">Class</div>
-    <div class="font-bld">mroperty</div>
+    <div class="font-bld">Property</div>
   </div>
   <tbody>
     <tr>
@@ -2461,10 +2461,16 @@
   </tbody>
 </table>
 
-**Margin E.g.**
+#### Usage
+
+<!-- **Use "m-{n}, ml-{n}, mr-{n}, mt-{n}, mb-{n}, my-{n}, mx-{n}" to set the margin for an element of n value.** -->
+
+**Use m{arg}-{n} to set the margin for an element of n value.**
 
 ```html
-<div class="d-grid w-full">
-  <h1 class="m-auto">Hello World</h1>
+<div class="flex">
+  <div>Box 1</div>
+  <div class="ml-12">Box 2</div>
 </div>
+<!--"ml-12" sets margin left to 2.75rem (_44px_). -->
 ```

@@ -27,7 +27,7 @@
 </tr>
 </table>
 
-**Transition e.g.**
+#### Usage
 
 ```html
 <p class="hover:text-blue-100 transition-2">Change to blue</p>
@@ -78,7 +78,7 @@
 </tr>
 </table>
 
-**Opacity e.g.**
+#### Usage
 
 ```html
 <div
@@ -125,10 +125,10 @@ url('/src/assets/awesomebgimage.jpg;')"
 </tr>
 </table>
 
-**Scale e.g.**
+#### Usage
 
 ```html
-<button type="Reset" class="hover:scale-150">Reset</button>
+<button class="hover:scale-150">Reset</button>
 ```
 
 ### Scale X

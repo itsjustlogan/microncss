@@ -973,10 +973,3 @@
     </tr>
   </tbody>
 </table>
-
-**Basic E.g.**
-
-```html
-<label for="email"> Enter your email</label>>
-<input id="email" type="email" name="email" class="w-40 h-10" />
-```

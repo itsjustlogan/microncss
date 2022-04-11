@@ -195,7 +195,7 @@
 </tr>
 </table>
 
-**Basic E.g.**
+#### Usage
 
 ```html
 <p class="border-2 border-style-solid border-radius">Hello World</p>

@@ -19,7 +19,7 @@ const stylesSidebar = [
 ]
 
 module.exports = {
-  title: 'MicronCSS',
+  title: 'MicronCSS Docs',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },

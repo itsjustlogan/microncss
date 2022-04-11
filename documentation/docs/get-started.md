@@ -2,18 +2,21 @@
 
 ## Installation
 
-To get started you can install microncss either through :
+To get started, install microncss.
 
 **NPM**
 
 ```bash
-npm install microncss
+npm install microncss --save-dev
 ```
 
 **CDN** _\*not recommeded for production\*_ :
 
 ```html
-<link rel="stylesheet" href="unpkg.com/microncss/v0.2.0" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/microncss@0.3.2/dist/micron.css"
+/>
 ```
 
 ### Initialize microncss
@@ -38,7 +41,7 @@ To begin using microncss utility classes, include the generated stylesheet in yo
     <link rel="stylesheet" href="/src/micron.css" />
   </head>
   <body>
-    <h1 class="font-4xl text-blue-300 pt-2">hello world!</h1>
+    <h1 class="font-4xl text-center pt-4">hello world!</h1>
   </body>
 </html>
 ```

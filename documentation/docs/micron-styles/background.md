@@ -79,7 +79,7 @@
 </tr>
 </table>
 
-**Basic E.g.**
+#### Usage
 
 ```html
 <div

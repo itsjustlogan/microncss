@@ -1,7 +1,7 @@
 {
   "name": "microncss",
-  "version": "0.3.1",
-  "description": "A fast, low configuration css utility library.",
+  "version": "0.3.2",
+  "description": "A fast low configuration css utility library.",
   "main": "src/index.js",
   "bin": {
     "microncss": "src/index.js",
@@ -11,7 +11,7 @@
     "main": false,
     "default": {
       "source": "src/scss/micron.scss",
-      "distDir": "src/cdn"
+      "distDir": "./dist"
     }
   },
   "scripts": {

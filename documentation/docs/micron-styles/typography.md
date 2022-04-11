@@ -63,6 +63,13 @@
   </tbody>
 </table>
 
+#### Usage
+
+```html
+<h2 class="font-2xl">Subtitle</h2>
+<!-- This will set the font size to 2.5rem. -->
+```
+
 ## Font Weight
 
 <table class="h-auto">
@@ -85,6 +92,14 @@
     </tr>
   </tbody>
 </table>
+
+#### Usage
+
+```html
+<i class="font-bld">
+  The greatest victory is that which requires no battle. - Sun Tzu
+</i>
+```
 
 ## Text Align
 
@@ -109,6 +124,12 @@
   </tbody>
 </table>
 
+#### Usage
+
+```html
+<h1 class="text-center font-8xl">Title</h1>
+```
+
 ## Text Transform
 
 <table class="h-auto">
@@ -132,11 +153,10 @@
   </tbody>
 </table>
 
-**Typography Manipulation E.g.**
+#### Usage
 
 ```html
-<h1 class="font-6xl font-bld text-center">Best Title Ever</h1>
-<h2 class="font-3xl font-med text-center uppercase">Best Subtitle Ever</h2>
+<p class="uppercase">boom!</p>
 ```
 
 ## Text Decoration
@@ -161,6 +181,19 @@
       </tr>
     </tbody>
 </table>
+
+#### Usage
+
+```html
+<p>
+  And visit
+  <a class="decor-none" href="mycoolwebsite.com" target="_blank">
+    my cool website
+  </a>
+  for more info.
+</p>
+<!-- This will remove the text decoration from the link. -->
+```
 
 ## Text Decoration Thickness
 
@@ -224,7 +257,7 @@
   </tbody>
 </table>
 
-**Decor & List E.g.**
+#### Usage
 
 ```html
 <ul class="list-none">
@@ -234,4 +267,8 @@
   <li>Bananas</li>
   <li>Cheese</li>
 </ul>
+<!--
+This will remove the dots beside the list, 
+and put a 2px line through milk.
+-->
 ```
