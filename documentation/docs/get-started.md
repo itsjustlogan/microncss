@@ -13,10 +13,7 @@ npm install microncss --save-dev
 **CDN** _\*not recommeded for production\*_ :
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/microncss@0.3.2/dist/micron.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.0" />
 ```
 
 ### Initialize microncss
@@ -25,7 +22,7 @@ npm install microncss --save-dev
 npx microncss init
 ```
 
-This will build the styles & create a microncss.config.json file in your root directory.
+This will build the styles & create a microncss.config.js file in your root directory.
 
 ### Use microncss styles
 
@@ -38,7 +35,7 @@ To begin using microncss utility classes, include the generated stylesheet in yo
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/micron.css" />
+    <link rel="stylesheet" href="/src/css/micron.css" />
   </head>
   <body>
     <h1 class="font-4xl text-center pt-4">hello world!</h1>
@@ -55,23 +52,28 @@ To build a production ready file, run:
 npx microncss build
 ```
 
-This will remove unused styles, add prefixes, and minify the css file makking it ready for production.
+This will remove unused styles, add prefixes, and minify the css file making it ready for production.
 
 ## Watcher
 
 ### Modify config file
 
-```json
-{
-  "watch": [""]
+```js
+export default {
+  watch: ['', 'src'],
+  templates: ['*.html'],
 }
 ```
 
-The config file consists of a variable "watch" that takes an array of directories as strings. The file starts with an empty string, telling the watcher to watch the root of the folder initially.
+The config file consists of two(2) properties.
+"watch" takes an array of directories as strings. It starts with an empty string, telling the watcher to watch the root of the folder initially.
 
-```json
-{
-  "watch": ["", "src/views", "src/components"]
+"templates" takes an array of your templates as strings.
+
+```js
+export default {
+  watch: ['', 'src/components'],
+  templates: ['**/*.js'],
 }
 ```
 

@@ -19,7 +19,9 @@ const stylesSidebar = [
 ]
 
 module.exports = {
-  title: 'MicronCSS Docs',
+  title: 'MicronCSS',
+  description: 'Documentation for micronCSS the css utility library.',
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -31,4 +33,7 @@ module.exports = {
       '/': homeSidebar,
     },
   },
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: './assets/favicon.ico' }],
+  ],
 }

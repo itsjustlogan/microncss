@@ -3,3 +3,6 @@ node_modules
 .eslintrc.json
 documentation
 .gitignore
+src
+rollup.config.js
+tsconfig.json
