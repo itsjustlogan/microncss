@@ -2,7 +2,7 @@
 
 A fast low configuration CSS utility library.
 
-[![npm](https://img.shields.io/badge/build-passing-sucess?&style=flat)](https://github.com/itsjustlogan/microncss)
+[![npm](https://img.shields.io/badge/build-stable-sucess?&style=flat)](https://github.com/itsjustlogan/microncss)
 [![npm](https://img.shields.io/npm/v/microncss?color=green)](https://www.npmjs.com/package/microncss)
 [![npm](https://img.shields.io/badge/licence-MIT-blue?&style=flat)](https://github.com/itsjustlogan/microncss/blob/main/LICENSE)
 
@@ -27,8 +27,5 @@ npm install microncss --save-dev
 **CDN**
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/microncss@0.3.2/dist/micron.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.0" />
 ```
