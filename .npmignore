@@ -6,3 +6,4 @@ documentation
 src
 rollup.config.js
 tsconfig.json
+lib/packageMicron.css
