@@ -33,7 +33,5 @@ module.exports = {
       '/': homeSidebar,
     },
   },
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: './assets/favicon.ico' }],
-  ],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.ico' }]],
 }

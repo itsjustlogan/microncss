@@ -14,7 +14,7 @@ A fast low configuration CSS utility library.
 
 ## **Documention**
 
-Visit [MicronCSS Docs](https://timely-lollipop-cc2ff5.netlify.app/) for full documentation
+Visit [microncss.com](https://www.microncss.com) for full documentation
 
 ## **Installation**
 
@@ -27,5 +27,5 @@ npm install microncss --save-dev
 **CDN**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.0" />
+<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.1" />
 ```
