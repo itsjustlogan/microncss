@@ -27,5 +27,5 @@ npm install microncss --save-dev
 **CDN**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.1" />
+<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.2" />
 ```
