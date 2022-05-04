@@ -287,13 +287,13 @@ $extra: (
 
   @each $k, $v in $values {
     @if ($k == 'default') {
-      .sm\:#{$name} {
+      .xs\:#{$name} {
         @include xs {
           #{$prop}: $v;
         }
       }
     } @else {
-      .sm\:#{$name}-#{$k} {
+      .xs\:#{$name}-#{$k} {
         @include xs {
           #{$prop}: $v;
         }

@@ -16,6 +16,7 @@ const stylesSidebar = [
   { text: 'Interactive', link: '/micron-styles/interactive' },
   { text: 'Effects & Animations', link: '/micron-styles/effects' },
   { text: 'Hover, Focus, & Active States', link: '/micron-styles/states' },
+  { text: 'Breakpoints', link: '/micron-styles/breakpoints' },
 ]
 
 module.exports = {

@@ -1810,13 +1810,13 @@ $utilities: (
 
   @each $k, $v in $values {
     @if ($k == 'default') {
-      .sm\:#{$prefix} {
+      .xs\:#{$prefix} {
         @include xs {
           #{$property}: $v;
         }
       }
     } @else {
-      .sm\:#{$prefix}-#{$k} {
+      .xs\:#{$prefix}-#{$k} {
         @include xs {
           #{$property}: $v;
         }

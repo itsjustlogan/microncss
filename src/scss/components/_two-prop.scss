@@ -200,14 +200,14 @@ $two-prop: (
 
   @each $k, $v in $values {
     @if ($k == 'default') {
-      .sm\:#{$name} {
+      .xs\:#{$name} {
         @include xs {
           #{$prop1}: $v;
           #{$prop2}: $v;
         }
       }
     } @else {
-      .sm\:#{$name}-#{$k} {
+      .xs\:#{$name}-#{$k} {
         @include xs {
           #{$prop1}: $v;
           #{$prop2}: $v;

@@ -3,6 +3,10 @@
 ## Background Position
 
 <table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>bg-left</td>
 <td>background-position: left;</td>
@@ -44,6 +48,10 @@
 ## Background Repeat
 
 <table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>bg-repeat</td>
 <td>background-repeat: repeat;</td>
@@ -65,6 +73,10 @@
 ## Background Size
 
 <table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>bg-cover</td>
 <td>background-size: cover;</td>

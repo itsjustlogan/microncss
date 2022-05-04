@@ -3,6 +3,10 @@
 ## Border Radius
 
 <table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>border-radius</td>
 <td>border-radius: 5px;</td>
@@ -20,6 +24,10 @@
 ## Border Width
 
 <table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>border-0</td>
 <td>border-width: 0;</td>
@@ -145,6 +153,10 @@
 ## Border Style
 
 <table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
 <tr>
 <td>border-style-none</td>
 <td>border-style: none;</td>

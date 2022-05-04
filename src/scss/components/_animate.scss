@@ -12,6 +12,8 @@ $animate: (
       '110': scale(1.1),
       '120': scale(1.2),
       '150': scale(1.5),
+      '175': scale(1.75),
+      '200': scale(2),
     ),
   ),
   'scale-x': (
@@ -25,6 +27,8 @@ $animate: (
       '110': scaleX(1.1),
       '120': scaleX(1.2),
       '150': scaleX(1.5),
+      '175': scaleX(1.75),
+      '200': scaleX(2),
     ),
   ),
   'scale-y': (
@@ -38,6 +42,17 @@ $animate: (
       '110': scaleY(1.1),
       '120': scaleY(1.2),
       '150': scaleY(1.5),
+      '175': scaleY(1.75),
+      '200': scaleY(2),
+    ),
+  ),
+  'rotate': (
+    'prop': 'transform',
+    'values': (
+      '45': rotate(45deg),
+      '90': rotate(90deg),
+      '-45': rotate(-45deg),
+      '-90': rotate(-90deg),
     ),
   ),
   'fade': (
@@ -155,6 +170,117 @@ $animate: (
     } @else {
       .active\:#{$name}-#{$k}:active {
         #{$prop}: $v;
+      }
+    }
+  }
+}
+
+// breakpoints
+// extra small
+@each $name, $map in $animate {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .xs\:#{$name} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .xs\:#{$name}-#{$k} {
+        @include xs {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// small
+@each $name, $map in $animate {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .sm\:#{$name} {
+        @include sm {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .sm\:#{$name}-#{$k} {
+        @include sm {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// medium
+@each $name, $map in $animate {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .md\:#{$name} {
+        @include md {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .md\:#{$name}-#{$k} {
+        @include md {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// large
+@each $name, $map in $animate {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .lg\:#{$name} {
+        @include lg {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .lg\:#{$name}-#{$k} {
+        @include lg {
+          #{$prop}: $v;
+        }
+      }
+    }
+  }
+}
+
+// extra large
+@each $name, $map in $animate {
+  $prop: map-get($map, 'prop');
+  $values: map-get($map, 'values');
+
+  @each $k, $v in $values {
+    @if ($k == 'default') {
+      .xl\:#{$name} {
+        @include xl {
+          #{$prop}: $v;
+        }
+      }
+    } @else {
+      .xl\:#{$name}-#{$k} {
+        @include xl {
+          #{$prop}: $v;
+        }
       }
     }
   }

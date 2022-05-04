@@ -13,7 +13,7 @@ npm install microncss --save-dev
 **CDN** _\*not recommeded for production\*_ :
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/microncss@0.4.2" />
+<link rel="stylesheet" href="https://unpkg.com/microncss@0.5.0" />
 ```
 
 ### Initialize microncss
@@ -73,7 +73,7 @@ The config file consists of two(2) properties.
 ```js
 export default {
   watch: ['', 'src/components'],
-  templates: ['**/*.js'],
+  templates: ['**/*.vue'],
 }
 ```
 
