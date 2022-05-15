@@ -23,7 +23,7 @@ npm install microncss --save-dev
 **CDN** _\*not recommeded for production\*_ :
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/microncss@1.0.0-rc.1" />
+<link rel="stylesheet" href="https://unpkg.com/microncss@latest" />
 ```
 
 ### Initialize microncss
