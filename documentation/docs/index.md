@@ -36,7 +36,7 @@ Github</a>
 
 .get-started {
   color: white;
-  background-color: #fdc71a;
+  background-color: #32acdc;
   padding-block: 0.5em;
   padding-left: 1em;
   padding-right: 1em;
@@ -48,7 +48,7 @@ Github</a>
   padding-block: 0.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  border: solid #fdc71a 2px;
+  border: solid #32acdc 2px;
   border-radius: 5px;
   margin: auto;
 }

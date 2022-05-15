@@ -9,4 +9,4 @@ export const grayText = chalk.bold.gray
 export const thinGrayText = chalk.gray
 export const whiteText = chalk.bold.white
 export const errorText = chalk.bgRed.white.bold
-export const logo = chalk.bold.hex('#d5a000')
+export const logo = chalk.bold.hex('#32acdc')

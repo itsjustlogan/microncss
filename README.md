@@ -1,4 +1,4 @@
-![microncss-logo-goldwhite](https://user-images.githubusercontent.com/31719884/160313006-cce2e0a5-be0f-41ff-ab48-940ebeb2b7fe.png)
+![bluemicroncsslogo-y-cropped](https://user-images.githubusercontent.com/31719884/168495516-fad57dd2-126c-472b-acc4-49ba5f2b4257.png)
 
 A fast low configuration CSS utility library.
 
