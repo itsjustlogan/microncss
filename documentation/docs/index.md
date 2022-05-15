@@ -17,6 +17,9 @@ Github</a>
 </script>
 
 <style>
+:root {
+  font-size: 1rem;
+}
 
 #title {
   text-align: center;

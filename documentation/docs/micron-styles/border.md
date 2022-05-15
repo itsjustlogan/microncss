@@ -1,4 +1,17 @@
-# Border
+## Border
+
+## Border Shorthand
+
+<table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+<tr>
+<td>border-none</td>
+<td>border: none;</td>
+</tr>
+</table>
 
 ## Border Radius
 
@@ -148,6 +161,66 @@
 <td>border-r-8</td>
 <td>border-right-width: 8px;</td>
 </tr>
+<tr>
+<td>border-thin</td>
+<td>border-width: thin;</td>
+</tr>
+<tr>
+<td>border-t-thin</td>
+<td>border-top-width: thin;</td>
+</tr>
+<tr>
+<td>border-b-thin</td>
+<td>border-bottom-width: thin;</td>
+</tr>
+<tr>
+<td>border-l-thin</td>
+<td>border-left-width: thin;</td>
+</tr>
+<tr>
+<td>border-r-thin</td>
+<td>border-right-width: thin;</td>
+</tr>
+<tr>
+<td>border-medium</td>
+<td>border-width: medium;</td>
+</tr>
+<tr>
+<td>border-t-medium</td>
+<td>border-top-width: medium;</td>
+</tr>
+<tr>
+<td>border-b-medium</td>
+<td>border-bottom-width: medium;</td>
+</tr>
+<tr>
+<td>border-l-medium</td>
+<td>border-left-width: medium;</td>
+</tr>
+<tr>
+<td>border-r-medium</td>
+<td>border-right-width: medium;</td>
+</tr>
+<tr>
+<td>border-thick</td>
+<td>outline-width: thick;</td>
+</tr>
+<tr>
+<td>border-t-thick</td>
+<td>outline-top-width: thick;</td>
+</tr>
+<tr>
+<td>border-b-thick</td>
+<td>outline-bottom-width: thick;</td>
+</tr>
+<tr>
+<td>border-l-thick</td>
+<td>outline-left-width: thick;</td>
+</tr>
+<tr>
+<td>border-r-thick</td>
+<td>outline-right-width: thick;</td>
+</tr>
 </table>
 
 ## Border Style
@@ -212,3 +285,128 @@
 ```html
 <p class="border-2 border-style-solid border-radius">Hello World</p>
 ```
+
+## Outline
+
+## Outline Shorthand
+
+<table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+<tr>
+<td>outline-none</td>
+<td>outline: none;</td>
+</tr>
+</table>
+
+## Outline Width
+
+<table class="h-auto">
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+<tr>
+<td>outline-0</td>
+<td>outline-width: 0;</td>
+</tr>
+<tr>
+<td>outline-1</td>
+<td>outline-width: 1px;</td>
+</tr>
+<tr>
+<td>outline-2</td>
+<td>outline-width: 2px;</td>
+</tr>
+<tr>
+<td>outline-4</td>
+<td>outline-width: 4px;</td>
+</tr>
+<tr>
+<td>outline-6</td>
+<td>outline-width: 6px;</td>
+</tr>
+<tr>
+<td>outline-8</td>
+<td>outline-width: 8px;</td>
+</tr>
+<tr>
+<td>outline-thin</td>
+<td>outline-width: thin;</td>
+</tr>
+<tr>
+<td>outline-medium</td>
+<td>outline-width: medium;</td>
+</tr>
+<tr>
+<td>outline-thick</td>
+<td>outline-width: thick;</td>
+</tr>
+</table>
+
+## Outline Style
+
+<table>
+  <div class="table-head">
+    <div class="font-bld">Class</div>
+    <div class="font-bld">Property</div>
+  </div>
+<tr>
+<td>outline-style-auto</td>
+<td>outline-style: auto;</td>
+</tr>
+<tr>
+<td>outline-style-none</td>
+<td>outline-style: none;</td>
+</tr>
+<tr>
+<td>outline-style-dotted</td>
+<td>outline-style: dotted;</td>
+</tr>
+<tr>
+<td>outline-style-dashed</td>
+<td>outline-style: dashed;</td>
+</tr>
+<tr>
+<td>outline-style-solid</td>
+<td>outline-style: solid;</td>
+</tr>
+<tr>
+<td>outline-style-double</td>
+<td>outline-style: double;</td>
+</tr>
+<tr>
+<td>outline-style-groove</td>
+<td>outline-style: groove;</td>
+</tr>
+<tr>
+<td>outline-style-ridge</td>
+<td>outline-style: ridge;</td>
+</tr>
+<tr>
+<td>outline-style-inset</td>
+<td>outline-style: inset;</td>
+</tr>
+<tr>
+<td>outline-style-outset</td>
+<td>outline-style: outset;</td>
+</tr>
+<tr>
+<td>outline-style-inherit</td>
+<td>outline-style: inherit;</td>
+</tr>
+<tr>
+<td>outline-style-initial</td>
+<td>outline-style: initial;</td>
+</tr>
+<tr>
+<td>outline-style-revert</td>
+<td>outline-style: revert;</td>
+</tr>
+<tr>
+<td>outline-style-unset</td>
+<td>outline-style: unset;</td>
+</tr>
+</table>

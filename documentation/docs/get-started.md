@@ -1,5 +1,15 @@
 # Get Started
 
+## Requirements
+
+Node version 16 or higher is required to run this.
+
+package.json must also indicate type module to run.
+
+```json
+"type": "module",
+```
+
 ## Installation
 
 To get started, install microncss.
@@ -13,7 +23,7 @@ npm install microncss --save-dev
 **CDN** _\*not recommeded for production\*_ :
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/microncss@0.5.0" />
+<link rel="stylesheet" href="https://unpkg.com/microncss@1.0.0-rc.1" />
 ```
 
 ### Initialize microncss
@@ -43,20 +53,7 @@ To begin using microncss utility classes, include the generated stylesheet in yo
 </html>
 ```
 
-## Build for production
-
-The css file that microncss generates is quite large and is not initially optimized for production.
-To build a production ready file, run:
-
-```bash
-npx microncss build
-```
-
-This will remove unused styles, add prefixes, and minify the css file making it ready for production.
-
-## Watcher
-
-### Modify config file
+## Modify config file
 
 ```js
 export default {
@@ -65,10 +62,39 @@ export default {
 }
 ```
 
-The config file consists of two(2) properties.
-"watch" takes an array of directories as strings. It starts with an empty string, telling the watcher to watch the root of the folder initially.
-
+The config file consists of two(2) properties. "watch" and "templates"
 "templates" takes an array of your templates as strings.
+
+## Build for production
+
+### Important
+
+In the microncss.config.js file you will find the templates property.
+
+```js
+templates: ['**/*.vue', '**/**/*.vue']
+```
+
+This array refers to the templates where you have written your html and microncss styles.
+You will need to populate the array with where to find the microncss styles you have written before you build for production.
+If you don't populate this field with the location of your templates, when you build, all the
+styles you used will be purged and not included in the production build file.
+
+### Generate production ready file
+
+The css file that microncss generates is quite large and is not optimized for production.
+To build a production ready file, run:
+
+```bash
+npx microncss build
+```
+
+This will remove unused styles, add prefixes, and minify the css file.
+
+## Watcher
+
+In the microncss.config.js file you will see the watch property. The "watch" property takes an array
+of directories as strings. It starts with an empty string, telling the watcher to watch the root of the folder initially.
 
 ```js
 export default {
@@ -76,6 +102,8 @@ export default {
   templates: ['**/*.vue'],
 }
 ```
+
+Be sure to populate the templates with your templates as the watcher actively purges styles as you write and save your file.
 
 Start the watcher by running
 
@@ -102,6 +130,3 @@ or
 ```bash
 npx micron
 ```
-
-<style scoped>
-</style>

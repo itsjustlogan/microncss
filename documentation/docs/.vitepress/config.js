@@ -11,7 +11,8 @@ const stylesSidebar = [
   { text: 'Sizing', link: '/micron-styles/sizing' },
   { text: 'Layout', link: '/micron-styles/layout' },
   { text: 'Grid/Flexbox', link: '/micron-styles/grid-flex' },
-  { text: 'Borders', link: '/micron-styles/border' },
+  { text: 'Borders & Outline', link: '/micron-styles/border' },
+  { text: 'Colors', link: '/micron-styles/colors' },
   { text: 'Backgrounds', link: '/micron-styles/background' },
   { text: 'Interactive', link: '/micron-styles/interactive' },
   { text: 'Effects & Animations', link: '/micron-styles/effects' },
@@ -35,4 +36,7 @@ module.exports = {
     },
   },
   head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.ico' }]],
+  // head: [
+  // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/microncss@0.5.0' }],
+  // ],
 }
