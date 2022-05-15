@@ -605,6 +605,51 @@ $utilities: (
       'right': right,
     ),
   ),
+  'outline': (
+    'prefix': 'outline',
+    'values': (
+      'none': none,
+    ),
+  ),
+  'outline-width': (
+    'prefix': 'outline',
+    'values': (
+      '0': 0,
+      '1': $base-border-width,
+      '2': $base-border-width * 2,
+      '4': $base-border-width * 4,
+      '6': $base-border-width * 6,
+      '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
+    ),
+  ),
+  'outline-style': (
+    'prefix': 'outline-style',
+    'values': (
+      'auto': auto,
+      'none': none,
+      'dotted': dotted,
+      'dashed': dashed,
+      'solid': solid,
+      'double': double,
+      'groove': groove,
+      'ridge': ridge,
+      'inset': inset,
+      'outset': outset,
+      'inherit': inherit,
+      'initial': initial,
+      'revert': revert,
+      'unset': unset,
+    ),
+  ),
+  'border': (
+    'prefix': 'border',
+    'values': (
+      'none': none,
+    ),
+  ),
   'border-radius': (
     'prefix': 'border-radius',
     'values': (
@@ -622,6 +667,9 @@ $utilities: (
       '4': $base-border-width * 4,
       '6': $base-border-width * 6,
       '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
     ),
   ),
   'border-top-width': (
@@ -633,6 +681,9 @@ $utilities: (
       '4': $base-border-width * 4,
       '6': $base-border-width * 6,
       '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
     ),
   ),
   'border-bottom-width': (
@@ -644,6 +695,9 @@ $utilities: (
       '4': $base-border-width * 4,
       '6': $base-border-width * 6,
       '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
     ),
   ),
   'border-left-width': (
@@ -655,6 +709,9 @@ $utilities: (
       '4': $base-border-width * 4,
       '6': $base-border-width * 6,
       '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
     ),
   ),
   'border-right-width': (
@@ -666,6 +723,9 @@ $utilities: (
       '4': $base-border-width * 4,
       '6': $base-border-width * 6,
       '8': $base-border-width * 8,
+      'thin': thin,
+      'medium': medium,
+      'thick': thick,
     ),
   ),
   'border-style': (
