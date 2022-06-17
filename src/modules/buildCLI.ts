@@ -1,12 +1,17 @@
-import { grayText, log, whiteText } from '../utils/constants.js'
-import buildStyles from './buildStyles.js'
+import { grayText, log, whiteText } from '../utils/constants'
+// import buildStyles from './buildStyles'
+import StyleBuilder from './styleBuilder'
 
-const buildCLI = async () => {
+async function buildCLI() {
   const start = performance.now()
+
+  // create new StyleBuilder instance
+  const defaultBuilder = new StyleBuilder()
 
   log(grayText('building styles...'))
 
-  await buildStyles()
+  await defaultBuilder.builder('', '')
+  // await buildStyles()
 
   const end = performance.now()
 

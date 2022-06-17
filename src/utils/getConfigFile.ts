@@ -1,4 +1,4 @@
-import { cwd, log, errorText } from './constants.js'
+import { cwd, log, errorText } from './constants'
 
 const getConfigFile = async (configSetting: number) => {
   try {

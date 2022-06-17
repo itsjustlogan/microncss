@@ -6,17 +6,17 @@ import postcss from 'postcss'
 import cssnano from 'cssnano'
 import preset from 'cssnano-preset-default'
 import purgecss from '@fullhuman/postcss-purgecss'
-import { cwd, grayText, log, whiteText } from '../utils/constants.js'
-import getPackageDir from '../utils/getPackageDir.js'
-import microncssExtractor from '../utils/microncssExtractor.js'
-import getConfigFile from '../utils/getConfigFile.js'
+import { cwd, grayText, log, whiteText } from '../utils/constants'
+import getPackageDir from '../utils/getPackageDir'
+import microncssExtractor from '../utils/microncssExtractor'
+import getConfigFile from '../utils/getConfigFile'
 
 const readFile = util.promisify(fs.readFile)
 
 const productionBuild = async () => {
   const template = await getConfigFile(1)
 
-  const templateArray = template.map((i: string) => `${cwd}/${i}`)
+  const templateArray = template?.map((i: string) => `${cwd}/${i}`)
 
   const start = performance.now()
   postcss([

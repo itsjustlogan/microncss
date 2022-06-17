@@ -3,10 +3,10 @@ import path from 'path'
 import util from 'util'
 import postcss from 'postcss'
 import purgecss from '@fullhuman/postcss-purgecss'
-import { cwd, log, thinGrayText } from '../utils/constants.js'
-import getPackageDir from '../utils/getPackageDir.js'
-import microncssExtractor from '../utils/microncssExtractor.js'
-import getConfigFile from '../utils/getConfigFile.js'
+import { cwd, log, thinGrayText } from '../utils/constants'
+import getPackageDir from '../utils/getPackageDir'
+import microncssExtractor from '../utils/microncssExtractor'
+import getConfigFile from '../utils/getConfigFile'
 
 const readFile = util.promisify(fs.readFile)
 

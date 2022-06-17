@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { cwd } from './constants.js'
+import { cwd } from './constants'
 
 const writeData = (
   data: Buffer | string,

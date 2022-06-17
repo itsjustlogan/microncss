@@ -1,10 +1,15 @@
-import { grayText, log } from '../utils/constants.js'
-import productionBuild from './productionBuild.js'
+import { grayText, log } from '../utils/constants'
+// import productionBuild from './productionBuild'
+import StyleBuilder from './styleBuilder'
 
-const productionCLI = () => {
+function productionCLI() {
   log(grayText('🧽 cleaning css...'))
 
-  productionBuild()
+  const prodBuild = new StyleBuilder()
+
+  prodBuild.builder('production', 'done in')
+
+  // productionBuild()
 }
 
 export default productionCLI

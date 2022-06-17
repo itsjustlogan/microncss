@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { cwd, errorText, grayText, log, logo } from '../utils/constants'
-import readData from '../utils/readData.js'
+import readData from '../utils/readData'
 
 const microncssConfig = await readData('./config/microncss.config.js')
 

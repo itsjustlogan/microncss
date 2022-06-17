@@ -1,6 +1,6 @@
 import fs from 'fs'
 import util from 'util'
-import { cwd } from './constants.js'
+import { cwd } from './constants'
 
 const mkdir = util.promisify(fs.mkdir)
 

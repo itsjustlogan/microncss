@@ -91,6 +91,12 @@ $extra: (
       'default': absolute,
     ),
   ),
+  'sticky': (
+    'prop': 'position',
+    'values': (
+      'default': sticky,
+    ),
+  ),
   'col': (
     'prop': 'grid-column',
     'values': (
