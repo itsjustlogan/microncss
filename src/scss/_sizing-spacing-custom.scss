@@ -1,6 +1,6 @@
-@use '../utils' as *;
+@use './utils' as *;
 
-$two-prop: (
+$sizing-spacing-custom: (
   'px': (
     'prop1': 'padding-left',
     'prop2': 'padding-right',
@@ -108,7 +108,7 @@ $two-prop: (
 );
 
 // generate utility classes
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -129,7 +129,7 @@ $two-prop: (
 }
 
 // hover
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -150,7 +150,7 @@ $two-prop: (
 }
 
 // focus
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -171,7 +171,7 @@ $two-prop: (
 }
 
 // active
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -193,7 +193,7 @@ $two-prop: (
 
 // breakpoints
 // extra small
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -218,7 +218,7 @@ $two-prop: (
 }
 
 // small
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -243,7 +243,7 @@ $two-prop: (
 }
 
 // medium
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -268,7 +268,7 @@ $two-prop: (
 }
 
 // large
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');
@@ -293,7 +293,7 @@ $two-prop: (
 }
 
 // extra large
-@each $name, $map in $two-prop {
+@each $name, $map in $sizing-spacing-custom {
   $prop1: map-get($map, 'prop1');
   $prop2: map-get($map, 'prop2');
   $values: map-get($map, 'values');

@@ -1,6 +1,6 @@
-@use '../utils' as *;
+@use './utils' as *;
 
-$animate: (
+$transform: (
   'scale': (
     'prop': 'transform',
     'values': (
@@ -110,7 +110,7 @@ $animate: (
 }
 
 // generate utility classes
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -128,7 +128,7 @@ $animate: (
 }
 
 // hover
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -146,7 +146,7 @@ $animate: (
 }
 
 // focus
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -164,7 +164,7 @@ $animate: (
 }
 
 // active
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -183,7 +183,7 @@ $animate: (
 
 // breakpoints
 // extra small
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -205,7 +205,7 @@ $animate: (
 }
 
 // small
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -227,7 +227,7 @@ $animate: (
 }
 
 // medium
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -249,7 +249,7 @@ $animate: (
 }
 
 // large
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -271,7 +271,7 @@ $animate: (
 }
 
 // extra large
-@each $name, $map in $animate {
+@each $name, $map in $transform {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 

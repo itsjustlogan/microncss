@@ -1,26 +1,16 @@
 import executeMicroncss from '../index'
 
-function addOne(num: number) {
-  return num + 1
-}
-
-describe('My addition function', () => {
-  it('adds 1 to input value', () => {
-    expect(addOne(2)).toBe(3)
-  })
-})
-
 describe('executes correct feature', () => {
-  it('initializes the program.', () => {
+  it('executes init option.', () => {
     expect(executeMicroncss('init')).toBe('initialized')
   })
-  it('creates a production build.', () => {
+  it('executes production build option.', () => {
     expect(executeMicroncss('build')).toBe('built production')
   })
-  it('watches for changes.', () => {
+  it('executes watch option.', () => {
     expect(executeMicroncss('watch')).toBe('watching')
   })
-  it('rebuilds styles', () => {
+  it('executes default', () => {
     expect(executeMicroncss('')).toBe('default rebuilding')
     expect(executeMicroncss(undefined)).toBe('default rebuilding')
   })

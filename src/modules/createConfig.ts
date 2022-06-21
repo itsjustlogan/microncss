@@ -1,10 +1,10 @@
 import fs from 'fs'
 import { cwd, errorText, grayText, log, logo } from '../utils/constants'
-import readData from '../utils/readData'
+import { readData } from '../utils/fileSystem'
 
 const microncssConfig = await readData('./config/microncss.config.js')
 
-const init = () => {
+export default function createConfig() {
   fs.writeFile(`${cwd}/microncss.config.js`, microncssConfig, (err) => {
     if (err) {
       console.error(errorText("Error: couldn't create config file.\n"))
@@ -15,5 +15,3 @@ const init = () => {
     }
   })
 }
-
-export default init

@@ -1,2 +1,6 @@
-@use './base/base';
-@use './components';
+@use './base';
+@use './sizing-spacing';
+@use './sizing-spacing-custom';
+@use './grid-flex-position';
+@use './transform';
+@use './colors';

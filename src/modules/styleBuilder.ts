@@ -6,21 +6,26 @@ import postcss from 'postcss'
 import cssnano from 'cssnano'
 import preset from 'cssnano-preset-default'
 import purgecss from '@fullhuman/postcss-purgecss'
-import compileSass from '../utils/compileSass'
-import getPackageDir from '../utils/getPackageDir'
-import makeDir from '../utils/makeDir'
-import writeData from '../utils/writeData'
-import writeLocal from '../utils/writeLocal'
+import {
+  compileSass,
+  makeDir,
+  writeData,
+  writeLocal,
+} from '../utils/fileSystem'
+import { getPackageDir, getConfigFile } from '../utils/getData'
 import { cwd, grayText, log, whiteText, thinGrayText } from '../utils/constants'
 import microncssExtractor from '../utils/microncssExtractor'
-import getConfigFile from '../utils/getConfigFile'
 
 class StyleBuilder {
+  private _readFile = util.promisify(fs.readFile)
+
   template: Array<string>
 
   templateArray: Array<string>
 
-  private _readFile = util.promisify(fs.readFile)
+  builderOption: string
+
+  msg: string
 
   dirToWrite: string
 
@@ -28,13 +33,18 @@ class StyleBuilder {
 
   end: number
 
-  async builder(builderOption: string, msg: string) {
+  constructor(builderOption?: string, msg?: string) {
+    this.builderOption = builderOption
+    this.msg = msg
+  }
+
+  async builder() {
     this.template = await getConfigFile(1)
     this.templateArray = this.template?.map((i: string) => `${cwd}/${i}`)
 
-    switch (builderOption) {
+    switch (this.builderOption) {
       case 'production':
-        // calculate start of execution
+        // calculate start time of execution
         this.start = performance.now()
 
         postcss([
@@ -66,7 +76,9 @@ class StyleBuilder {
         this.end = performance.now()
         log(
           whiteText(
-            `\n${msg} ${grayText(`${(this.end - this.start).toFixed(0)}ms`)} \n`
+            `\n${this.msg} ${grayText(
+              `${(this.end - this.start).toFixed(0)}ms`
+            )} \n`
           )
         )
 
@@ -102,7 +114,7 @@ class StyleBuilder {
           })
 
         this.end = performance.now()
-        log(thinGrayText(`${msg} ${(this.end - this.start).toFixed(0)}ms`))
+        log(thinGrayText(`${this.msg} ${(this.end - this.start).toFixed(0)}ms`))
 
         break
       default:

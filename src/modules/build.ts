@@ -1,8 +1,7 @@
 import { grayText, log, whiteText } from '../utils/constants'
-// import buildStyles from './buildStyles'
 import StyleBuilder from './styleBuilder'
 
-async function buildCLI() {
+export default async function buildOption() {
   const start = performance.now()
 
   // create new StyleBuilder instance
@@ -10,12 +9,9 @@ async function buildCLI() {
 
   log(grayText('building styles...'))
 
-  await defaultBuilder.builder('', '')
-  // await buildStyles()
+  await defaultBuilder.builder()
 
   const end = performance.now()
 
   log(whiteText(`\ndone in ${grayText(`${(end - start).toFixed(0)}ms.`)}\n`))
 }
-
-export default buildCLI

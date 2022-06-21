@@ -1,6 +1,6 @@
-@use '../utils' as *;
+@use './utils' as *;
 
-$utilities: (
+$sizing-spacing: (
   'padding': (
     'prefix': 'p',
     'values': (
@@ -1791,7 +1791,7 @@ $utilities: (
 );
 
 // generate utility classes
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1809,7 +1809,7 @@ $utilities: (
 }
 
 // hover
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1827,7 +1827,7 @@ $utilities: (
 }
 
 // focus
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1845,7 +1845,7 @@ $utilities: (
 }
 
 // active
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1864,7 +1864,7 @@ $utilities: (
 
 // breakpoints
 // extra small
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1886,7 +1886,7 @@ $utilities: (
 }
 
 // small
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1908,7 +1908,7 @@ $utilities: (
 }
 
 // medium
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1930,7 +1930,7 @@ $utilities: (
 }
 
 // large
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 
@@ -1952,7 +1952,7 @@ $utilities: (
 }
 
 // extra large
-@each $property, $map in $utilities {
+@each $property, $map in $sizing-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
 

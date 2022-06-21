@@ -1,11 +1,9 @@
 import fs from 'fs'
-import parseDate from '../utils/parseDate'
 import { errorText, log, logo, cwd, thinGrayText } from '../utils/constants'
-import watcherBuilder from './watcherBuilder'
-import getConfigFile from '../utils/getConfigFile'
+import { getConfigFile, parseDate } from '../utils/getData'
 import StyleBuilder from './styleBuilder'
 
-const watcher = async () => {
+export default async function watchOption() {
   let watching = false
 
   const watch = await getConfigFile(0)
@@ -21,8 +19,8 @@ const watcher = async () => {
   if (watch) {
     log(logo('[microncss]'), thinGrayText('watching...👀'))
 
-    // creat StyleBuilder instance
-    const watchBuild = new StyleBuilder()
+    // create StyleBuilder instance
+    const watchBuilder = new StyleBuilder('watch', 'rebuilt in')
 
     watch.forEach((watchDir: string) => {
       fs.watch(
@@ -40,9 +38,8 @@ const watcher = async () => {
             thinGrayText(`"${fileName}" was ${eventType}d`)
           )
 
-          // testing object builder
-          watchBuild.builder('watch', 'rebuilt in')
-          // watcherBuilder()
+          // invoke builder
+          watchBuilder.builder()
 
           setTimeout(() => {
             watching = false
@@ -55,5 +52,3 @@ const watcher = async () => {
     log(watch)
   }
 }
-
-export default watcher

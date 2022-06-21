@@ -187,6 +187,14 @@ url('/src/assets/awesomebgimage.jpg;')"
       <td>scale-200</td>
       <td>transform: scale(2);</td>
     </tr>
+      <tr>
+      <td>scale-250</td>
+      <td>transform: scale(2.5);</td>
+    </tr>
+    <tr>
+      <td>scale-300</td>
+      <td>transform: scale(3);</td>
+    </tr>
   </tbody>
 </table>
 
@@ -244,6 +252,14 @@ url('/src/assets/awesomebgimage.jpg;')"
     <td>scale-x-200</td>
     <td>transform: scale(2);</td>
     </tr>
+    <tr>
+    <td>scale-x-250</td>
+    <td>transform: scale(2.5);</td>
+    </tr>
+    <tr>
+    <td>scale-x-300</td>
+    <td>transform: scale(3);</td>
+    </tr>
   </tbody>
 </table>
 
@@ -294,6 +310,14 @@ url('/src/assets/awesomebgimage.jpg;')"
     <tr>
     <td>scale-y-200</td>
     <td>transform: scale(2);</td>
+    </tr>
+    <tr>
+    <td>scale-y-250</td>
+    <td>transform: scale(2.5);</td>
+    </tr>
+    <tr>
+    <td>scale-y-300</td>
+    <td>transform: scale(3);</td>
     </tr>
   </tbody>
 </table>

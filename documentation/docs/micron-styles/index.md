@@ -23,7 +23,6 @@ Basic CSS reset
 
 ```css
 :root {
-  font-size: calc(0.5em + 1vw);
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
@@ -37,6 +36,5 @@ body {
 <style>
   td {
     padding-block: 1.25em;
-    /* border: none; */
   }
 </style>

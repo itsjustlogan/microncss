@@ -1,6 +1,6 @@
-@use '../utils' as *;
+@use './utils' as *;
 
-$extra: (
+$grid-flex-position: (
   'uppercase': (
     'prop': 'text-transform',
     'values': (
@@ -214,7 +214,7 @@ $extra: (
 );
 
 // generate utility classes
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -232,7 +232,7 @@ $extra: (
 }
 
 // hover
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -250,7 +250,7 @@ $extra: (
 }
 
 // focus
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -268,7 +268,7 @@ $extra: (
 }
 
 // active
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -287,7 +287,7 @@ $extra: (
 
 // breakpoints
 // extra small
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -309,7 +309,7 @@ $extra: (
 }
 
 // small
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -331,7 +331,7 @@ $extra: (
 }
 
 // medium
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -353,7 +353,7 @@ $extra: (
 }
 
 // large
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 
@@ -375,7 +375,7 @@ $extra: (
 }
 
 // extra large
-@each $name, $map in $extra {
+@each $name, $map in $grid-flex-position {
   $prop: map-get($map, 'prop');
   $values: map-get($map, 'values');
 

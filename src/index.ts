@@ -1,7 +1,7 @@
-import buildCLI from './modules/buildCLI'
-import init from './modules/init'
-import productionCLI from './modules/productionCLI'
-import watcher from './modules/watcher'
+import createConfig from './modules/createConfig'
+import buildOption from './modules/build'
+import productionOption from './modules/production'
+import watchOption from './modules/watch'
 import { errorText, log, logo, whiteText } from './utils/constants'
 
 // start of the program
@@ -12,8 +12,8 @@ function executeMicroncss(featureFlag?: string): string {
     // initializer
     case 'init':
     case '--init':
-      init()
-      buildCLI()
+      createConfig()
+      buildOption()
       return 'initialized'
 
     // production build
@@ -24,19 +24,19 @@ function executeMicroncss(featureFlag?: string): string {
     case '--prod':
     case 'production':
     case '--production':
-      productionCLI()
+      productionOption()
       return 'built production'
 
     // watcher
     case 'watch':
     case '--watch':
-      watcher()
+      watchOption()
       return 'watching'
 
     // catch invalid options
     default:
       if (option === undefined || option === null || option === '') {
-        buildCLI()
+        buildOption()
         return 'default rebuilding'
       }
       log(
@@ -46,31 +46,6 @@ function executeMicroncss(featureFlag?: string): string {
       )
       return 'invalid option'
   }
-
-  // if (option === 'init' || option === '--init') {
-  //   init()
-  //   buildCLI()
-  // } else if (
-  //   option === '--build-prod' ||
-  //   option === 'build' ||
-  //   option === '--build' ||
-  //   option === '--production' ||
-  //   option === 'production' ||
-  //   option === '--prod' ||
-  //   option === 'prod'
-  // ) {
-  //   productionCLI()
-  // } else if (option === '--watch' || option === 'watch') {
-  //   watcher()
-  // } else if (option === undefined || option === null) {
-  //   buildCLI()
-  // } else {
-  //   log(
-  //     errorText(`Ivalid option ${option}!`),
-  //     whiteText('\n Available options: '),
-  //     logo('init, build, or watch.')
-  //   )
-  // }
 }
 
 executeMicroncss(process.argv[2])
