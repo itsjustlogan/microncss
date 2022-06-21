@@ -7,7 +7,7 @@ src
 rollup.config.js
 tsconfig.json
 lib/packageMicron.css
-microncss.config.js
+/microncss.config.js
 src/utils/config
 src/css
 jest.config.cjs
